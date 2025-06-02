@@ -1,12 +1,18 @@
+
+
 [project]
 name = "tabdeal-project"
 version = "0.1.0"
-description = "Add your description here"
+description = "Ann App to Charge Phone Numbers"
 authors = [
     { name = "alireza", email = "alireza.y.v.1378@gmail.com" }
 ]
 dependencies = [
     "djangorestframework>=3.16.0",
+    "psycopg2>=2.9.9",
+    "python-dotenv>=1.0.1",
+    "gunicorn>=23.0.0",
+    "mock>=5.1.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
@@ -17,10 +23,42 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = []
+virtual = true
+generate-hashes = true
+dev-dependencies = [
+    "pre-commit>=3.8.0",
+    "ruff>=0.6.4",
+    "pytest-factoryboy>=2.7.0",
+    "ipython>=9.0.2",
+]
 
-[tool.hatch.metadata]
-allow-direct-references = true
+[tool.ruff]
+fix = true
+line-length = 120
+# Allow unused variables prefixed with "_"
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"] # Ignore assert warnings in tests
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/tabdeal_project"]
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = [
+    "E",    # Pyflakes (Error detection)
+    "F",    # PyFlakes (Unused imports, undefined names)
+    "I",    # isort (Import sorting)
+    "COM812",  # Remove unnecessary trailing commas
+    "UP",   # pyupgrade (Modernize syntax)
+    "B",    # bugbear (Security & performance issues)
+    "C4",   # flake8-comprehensions (Optimize comprehensions)
+    "T20",  # flake8-print (Warn about print statements)
+    "DJ",  # Django-specific checks
+    "S",    # pylint (Code style)
+    "Q",    # pylint (Code quality)
+    "N",    # pylint (Naming conventions)
+]
+ignore = [
+    "E501", # Line too long (Handled by formatter)
+]
