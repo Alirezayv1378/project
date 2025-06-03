@@ -12,6 +12,7 @@ import credit_charge.models
 logger = logging.getLogger(__name__)
 
 
+@transaction.atomic
 def create_charge(phone_number: str, amount: decimal.Decimal) -> credit_charge.models.Charge:
     try:
         user = credit_charge.models.User.objects.get(phone_number=phone_number)
@@ -24,6 +25,7 @@ def create_charge(phone_number: str, amount: decimal.Decimal) -> credit_charge.m
     return credit_charge.models.Charge.create_charge(amount=amount, user=user)
 
 
+@transaction.atomic
 def create_transaction(
     seller_phone_number: str,
     receiver_phone_number: str,
@@ -47,16 +49,15 @@ def create_transaction(
         receiver_user=receiver,
         amount=amount,
     )
+
     try:
-        with transaction.atomic():
-            credit_charge.models.User.update_balance(
-                amount=decimal.Decimal("-1") * amount,
-                phone_number=seller.phone_number,
-            )
-            credit_charge.models.User.update_balance(amount=amount, phone_number=receiver.phone_number)
-            user_transaction.confirm_transaction()
-    except credit_charge.exceptions.NegetavieBalanceError as e:
-        logger.error(f"Seller {seller} has insufficient balance: {e}")
+        credit_charge.models.User.update_balance(
+            amount=decimal.Decimal("-1") * amount,
+            phone_number=seller.phone_number,
+        )
+        credit_charge.models.User.update_balance(amount=amount, phone_number=receiver.phone_number)
+        user_transaction.confirm_transaction()
+    except credit_charge.exceptions.NegetavieBalanceError:
         user_transaction.reject_transaction(reason=credit_charge.consts.UserTransactionDescription.INSUFFICIENT_BALANCE)
     except Exception as e:
         logger.error(f"Error raised during updating {seller} and {receiver} wallet balance: {e}")

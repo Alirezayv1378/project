@@ -47,6 +47,7 @@ class User(utils.models.CreateUpdateTracker):
         indexes = [
             models.Index(fields=["phone_number"]),
         ]
+        ordering = ("-created_at",)
 
     @classmethod
     def update_balance(
@@ -113,6 +114,7 @@ class Charge(utils.models.CreateUpdateTracker):
     class Meta:
         verbose_name = _("شارژ حساب")
         verbose_name_plural = _("شارژ حساب‌ها")
+        ordering = ("-created_at",)
 
     def __str__(self) -> str:
         return f"{self.user} - {self.status}"
@@ -190,6 +192,7 @@ class UserTransaction(utils.models.CreateUpdateTracker):
     class Meta:
         verbose_name = _("تراکنش بین کاربران")
         verbose_name_plural = _("تراکنش‌های بین کاربران")
+        ordering = ("-created_at",)
 
     @classmethod
     def create_transaction(cls, amount: decimal.Decimal, receiver_user: User, seller: User) -> "UserTransaction":

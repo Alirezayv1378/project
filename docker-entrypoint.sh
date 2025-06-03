@@ -1,22 +1,27 @@
-#!/usr/bin/env sh
+# #!/usr/bin/env sh
 
-# better to use another entrypoint
-python manage.py makemigrations
+if [ "$ENVIRONMENT" = "development" ]; then
+    python manage.py makemigrations || {
+        echo "Makemigrations failed"
+        exit 1
+    }
+fi
+
 python manage.py migrate
+
 if [ $? -ne 0 ]; then
     echo "Migration failed." >&2
     exit 1
 fi
 
-#  todo: just for development
-python insert_init_data.py
-
-if [[ $# -gt 0 ]]; then
-    INPUT=$@
-    sh -c "$INPUT"
-else
-    python ./manage.py collectstatic --noinput
-    echo "Starting Gunicorn..."
-    gunicorn core.wsgi --bind 0.0.0.0:8000 --timeout 1000 -w 5 --reload
+if [ "$ENVIRONMENT" = "development" ]; then
+    echo "Loading initial data..."
+    python manage.py loaddata data.json || {
+        echo "Loading json data failed"
+        exit 1
+    }
+    python insert_init_data.py
 fi
 
+echo "Starting Gunicorn..."
+gunicorn core.wsgi --bind 0.0.0.0:8000 --timeout 1000 -w 5 --reload

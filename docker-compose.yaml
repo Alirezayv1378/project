@@ -19,6 +19,9 @@ services:
     restart: always
     env_file:
       - ./.env
+    profiles:
+      - dev
+      - prod
 
   django-core:
     entrypoint: sh ./docker-entrypoint.sh
@@ -33,10 +36,41 @@ services:
     depends_on:
       postgres_db:
         condition: service_healthy
+    profiles:
+      - dev
+      - prod
 
+  locust:
+    image: locustio/locust
+    ports:
+      - "8089:8089"
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: -f locustfile.py --master -H http://django-core:8000
+    depends_on:
+      - django-core
+    env_file:
+      - ./.env
+    profiles:
+      - dev
+
+  worker:
+    image: locustio/locust
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: -f locustfile.py --worker --master-host locust
+    depends_on:
+      - locust
+    env_file:
+      - ./.env
+    profiles:
+      - dev
 
 volumes:
   postgres_data:
+
 
 networks:
   default:

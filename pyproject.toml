@@ -31,6 +31,7 @@ dev-dependencies = [
     "ruff>=0.6.4",
     "pytest-factoryboy>=2.7.0",
     "ipython>=9.0.2",
+    "locust>=2.37.7",
 ]
 
 [tool.ruff]
