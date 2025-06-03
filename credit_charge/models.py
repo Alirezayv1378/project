@@ -44,6 +44,9 @@ class User(utils.models.CreateUpdateTracker):
     class Meta:
         verbose_name = _("کاربر")
         verbose_name_plural = _("کاربران")
+        indexes = [
+            models.Index(fields=["phone_number"]),
+        ]
 
     @classmethod
     def update_balance(
@@ -51,6 +54,9 @@ class User(utils.models.CreateUpdateTracker):
         amount: decimal.Decimal,
         phone_number: str,
     ):
+        """
+        Must be use in atomic transaction
+        """
         try:
             # Lock user object to prevent double-spending and race conditions
             user = cls.objects.select_for_update(of=["self"]).get(phone_number=phone_number)
@@ -207,8 +213,8 @@ class UserTransaction(utils.models.CreateUpdateTracker):
 
     def clean(self, **kwargs):
         credit_charge.model_validators.validate_transaction_status(self)
-        return super().full_clean(**kwargs)
+        return super().clean(**kwargs)
 
     def save(self, **kwargs):
-        self.clean()
+        self.full_clean()
         return super().save(**kwargs)

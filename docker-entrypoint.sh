@@ -8,7 +8,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# todo: maybe we don't need it
+#  todo: just for development
 python insert_init_data.py
 
 if [[ $# -gt 0 ]]; then

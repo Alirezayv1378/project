@@ -1,0 +1,1709 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2025-06-03T09:58:54.370Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "100",
+            "object_repr": "+989486018480",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u0641\\u0631\\u0648\\u0634\\u0646\\u062f\\u0647\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2025-06-03T09:58:58.828Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "99",
+            "object_repr": "+989892512433",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u0641\\u0631\\u0648\\u0634\\u0646\\u062f\\u0647\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2025-06-03T10:05:22.636Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "3",
+            "object_repr": "+989892512433 - CONFIRMED",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2025-06-03T10:05:42.400Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "+989486018480 - CONFIRMED",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2025-06-03T10:05:42.400Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "+989486018480 - WAITING",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 4,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 4,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 4,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 4,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 5,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 5,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 5,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 5,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 6,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 6,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 6,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 6,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add کاربر",
+            "content_type": 7,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change کاربر",
+            "content_type": 7,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete کاربر",
+            "content_type": 7,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view کاربر",
+            "content_type": 7,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add شارژ حساب",
+            "content_type": 8,
+            "codename": "add_charge"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change شارژ حساب",
+            "content_type": 8,
+            "codename": "change_charge"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete شارژ حساب",
+            "content_type": 8,
+            "codename": "delete_charge"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view شارژ حساب",
+            "content_type": 8,
+            "codename": "view_charge"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add تراکنش بین کاربران",
+            "content_type": 9,
+            "codename": "add_usertransaction"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change تراکنش بین کاربران",
+            "content_type": 9,
+            "codename": "change_usertransaction"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete تراکنش بین کاربران",
+            "content_type": 9,
+            "codename": "delete_usertransaction"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view تراکنش بین کاربران",
+            "content_type": 9,
+            "codename": "view_usertransaction"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$1000000$sXTy4QBhpNPEtAS1sgNJ06$wN26wsZNj9URM+g9J6xAZYKSASl1WlOEHdbX8k+rWm0=",
+            "last_login": "2025-06-03T09:58:44.920Z",
+            "is_superuser": true,
+            "username": "super",
+            "first_name": "",
+            "last_name": "",
+            "email": "super@super.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2025-06-03T09:50:46.278Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "credit_charge",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "credit_charge",
+            "model": "charge"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "credit_charge",
+            "model": "usertransaction"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "a8keipz6npxy1hdpt3sdi3npnthssle2",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSGMhJdL934DGZhBqgaS0q4a_12bdKHbe865m4i4LjWug-c4kbgIEKffLWF-ctsBPbDdu8y9LfOU5K7Igw5568Sv6-H-HVQc9Vur4jMwISRQhXxhr4msAweKHZO2QdniHWFhFUCbHExmC57P2hBTEu8P_zU4nQ:1uMOPs:PaZLfanA6vexw_W7N0sGIKnbwzHzfurWFk66fHq1OU0",
+            "expire_date": "2025-06-17T09:58:44.922Z"
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 1,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.195Z",
+            "updated_at": "2025-06-03T09:58:31.195Z",
+            "phone_number": "+989741369760",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 2,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.198Z",
+            "updated_at": "2025-06-03T09:58:31.198Z",
+            "phone_number": "+989966758851",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 3,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.200Z",
+            "updated_at": "2025-06-03T09:58:31.200Z",
+            "phone_number": "+989707921964",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 4,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.201Z",
+            "updated_at": "2025-06-03T09:58:31.201Z",
+            "phone_number": "+989136444108",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 5,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.203Z",
+            "updated_at": "2025-06-03T09:58:31.203Z",
+            "phone_number": "+989843607349",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 6,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.205Z",
+            "updated_at": "2025-06-03T09:58:31.205Z",
+            "phone_number": "+989948089909",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 7,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.207Z",
+            "updated_at": "2025-06-03T09:58:31.207Z",
+            "phone_number": "+989019950614",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 8,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.209Z",
+            "updated_at": "2025-06-03T09:58:31.209Z",
+            "phone_number": "+989731341803",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 9,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.210Z",
+            "updated_at": "2025-06-03T09:58:31.210Z",
+            "phone_number": "+989673313585",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 10,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.212Z",
+            "updated_at": "2025-06-03T09:58:31.212Z",
+            "phone_number": "+989283336420",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 11,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.214Z",
+            "updated_at": "2025-06-03T09:58:31.214Z",
+            "phone_number": "+989065875944",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 12,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.216Z",
+            "updated_at": "2025-06-03T09:58:31.216Z",
+            "phone_number": "+989318420774",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 13,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.217Z",
+            "updated_at": "2025-06-03T09:58:31.217Z",
+            "phone_number": "+989926084267",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 14,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.219Z",
+            "updated_at": "2025-06-03T09:58:31.219Z",
+            "phone_number": "+989235910052",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 15,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.220Z",
+            "updated_at": "2025-06-03T09:58:31.220Z",
+            "phone_number": "+989190765694",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 16,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.222Z",
+            "updated_at": "2025-06-03T09:58:31.222Z",
+            "phone_number": "+989201040153",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 17,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.223Z",
+            "updated_at": "2025-06-03T09:58:31.223Z",
+            "phone_number": "+989681340891",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 18,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.225Z",
+            "updated_at": "2025-06-03T09:58:31.225Z",
+            "phone_number": "+989304582234",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 19,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.227Z",
+            "updated_at": "2025-06-03T09:58:31.227Z",
+            "phone_number": "+989792613756",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 20,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.228Z",
+            "updated_at": "2025-06-03T09:58:31.228Z",
+            "phone_number": "+989717294272",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 21,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.230Z",
+            "updated_at": "2025-06-03T09:58:31.230Z",
+            "phone_number": "+989908681055",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 22,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.231Z",
+            "updated_at": "2025-06-03T09:58:31.231Z",
+            "phone_number": "+989772033198",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 23,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.232Z",
+            "updated_at": "2025-06-03T09:58:31.232Z",
+            "phone_number": "+989953724926",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 24,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.234Z",
+            "updated_at": "2025-06-03T09:58:31.234Z",
+            "phone_number": "+989232710377",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 25,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.235Z",
+            "updated_at": "2025-06-03T09:58:31.235Z",
+            "phone_number": "+989024705575",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 26,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.237Z",
+            "updated_at": "2025-06-03T09:58:31.237Z",
+            "phone_number": "+989008020305",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 27,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.238Z",
+            "updated_at": "2025-06-03T09:58:31.238Z",
+            "phone_number": "+989414828214",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 28,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.240Z",
+            "updated_at": "2025-06-03T09:58:31.240Z",
+            "phone_number": "+989685256098",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 29,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.241Z",
+            "updated_at": "2025-06-03T09:58:31.241Z",
+            "phone_number": "+989178177650",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 30,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.243Z",
+            "updated_at": "2025-06-03T09:58:31.243Z",
+            "phone_number": "+989857198298",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 31,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.244Z",
+            "updated_at": "2025-06-03T09:58:31.244Z",
+            "phone_number": "+989829186035",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 32,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.246Z",
+            "updated_at": "2025-06-03T09:58:31.246Z",
+            "phone_number": "+989323714082",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 33,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.247Z",
+            "updated_at": "2025-06-03T09:58:31.247Z",
+            "phone_number": "+989648413171",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 34,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.249Z",
+            "updated_at": "2025-06-03T09:58:31.249Z",
+            "phone_number": "+989928870190",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 35,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.251Z",
+            "updated_at": "2025-06-03T09:58:31.251Z",
+            "phone_number": "+989355863936",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 36,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.253Z",
+            "updated_at": "2025-06-03T09:58:31.253Z",
+            "phone_number": "+989815163784",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 37,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.255Z",
+            "updated_at": "2025-06-03T09:58:31.255Z",
+            "phone_number": "+989991007027",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 38,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.256Z",
+            "updated_at": "2025-06-03T09:58:31.256Z",
+            "phone_number": "+989509864811",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 39,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.258Z",
+            "updated_at": "2025-06-03T09:58:31.258Z",
+            "phone_number": "+989680761129",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 40,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.259Z",
+            "updated_at": "2025-06-03T09:58:31.259Z",
+            "phone_number": "+989967376486",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 41,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.261Z",
+            "updated_at": "2025-06-03T09:58:31.261Z",
+            "phone_number": "+989683471242",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 42,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.262Z",
+            "updated_at": "2025-06-03T09:58:31.262Z",
+            "phone_number": "+989765689970",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 43,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.264Z",
+            "updated_at": "2025-06-03T09:58:31.264Z",
+            "phone_number": "+989894998769",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 44,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.265Z",
+            "updated_at": "2025-06-03T09:58:31.265Z",
+            "phone_number": "+989579953951",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 45,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.267Z",
+            "updated_at": "2025-06-03T09:58:31.267Z",
+            "phone_number": "+989444161742",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 46,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.268Z",
+            "updated_at": "2025-06-03T09:58:31.268Z",
+            "phone_number": "+989629185755",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 47,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.269Z",
+            "updated_at": "2025-06-03T09:58:31.269Z",
+            "phone_number": "+989734512641",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 48,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.271Z",
+            "updated_at": "2025-06-03T09:58:31.271Z",
+            "phone_number": "+989975502284",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 49,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.272Z",
+            "updated_at": "2025-06-03T09:58:31.272Z",
+            "phone_number": "+989109385970",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 50,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.274Z",
+            "updated_at": "2025-06-03T09:58:31.274Z",
+            "phone_number": "+989748890337",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 51,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.276Z",
+            "updated_at": "2025-06-03T09:58:31.276Z",
+            "phone_number": "+989099863992",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 52,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.277Z",
+            "updated_at": "2025-06-03T09:58:31.277Z",
+            "phone_number": "+989067742309",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 53,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.279Z",
+            "updated_at": "2025-06-03T09:58:31.279Z",
+            "phone_number": "+989040292166",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 54,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.281Z",
+            "updated_at": "2025-06-03T09:58:31.281Z",
+            "phone_number": "+989312441378",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 55,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.282Z",
+            "updated_at": "2025-06-03T09:58:31.282Z",
+            "phone_number": "+989074599467",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 56,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.284Z",
+            "updated_at": "2025-06-03T09:58:31.284Z",
+            "phone_number": "+989534001465",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 57,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.286Z",
+            "updated_at": "2025-06-03T09:58:31.286Z",
+            "phone_number": "+989305244948",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 58,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.287Z",
+            "updated_at": "2025-06-03T09:58:31.287Z",
+            "phone_number": "+989824790366",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 59,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.290Z",
+            "updated_at": "2025-06-03T09:58:31.290Z",
+            "phone_number": "+989921889825",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 60,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.292Z",
+            "updated_at": "2025-06-03T09:58:31.292Z",
+            "phone_number": "+989491377669",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 61,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.294Z",
+            "updated_at": "2025-06-03T09:58:31.294Z",
+            "phone_number": "+989625129514",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 62,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.295Z",
+            "updated_at": "2025-06-03T09:58:31.295Z",
+            "phone_number": "+989515506876",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 63,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.297Z",
+            "updated_at": "2025-06-03T09:58:31.297Z",
+            "phone_number": "+989550222899",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 64,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.298Z",
+            "updated_at": "2025-06-03T09:58:31.298Z",
+            "phone_number": "+989319627182",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 65,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.300Z",
+            "updated_at": "2025-06-03T09:58:31.300Z",
+            "phone_number": "+989686883950",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 66,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.301Z",
+            "updated_at": "2025-06-03T09:58:31.301Z",
+            "phone_number": "+989810309322",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 67,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.303Z",
+            "updated_at": "2025-06-03T09:58:31.303Z",
+            "phone_number": "+989385881622",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 68,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.305Z",
+            "updated_at": "2025-06-03T09:58:31.305Z",
+            "phone_number": "+989636406251",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 69,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.307Z",
+            "updated_at": "2025-06-03T09:58:31.307Z",
+            "phone_number": "+989731233221",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 70,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.309Z",
+            "updated_at": "2025-06-03T09:58:31.309Z",
+            "phone_number": "+989188172355",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 71,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.311Z",
+            "updated_at": "2025-06-03T09:58:31.311Z",
+            "phone_number": "+989421137688",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 72,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.312Z",
+            "updated_at": "2025-06-03T09:58:31.312Z",
+            "phone_number": "+989358269216",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 73,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.314Z",
+            "updated_at": "2025-06-03T09:58:31.314Z",
+            "phone_number": "+989008388847",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 74,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.316Z",
+            "updated_at": "2025-06-03T09:58:31.316Z",
+            "phone_number": "+989127582111",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 75,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.317Z",
+            "updated_at": "2025-06-03T09:58:31.317Z",
+            "phone_number": "+989178761886",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 76,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.319Z",
+            "updated_at": "2025-06-03T09:58:31.319Z",
+            "phone_number": "+989021115539",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 77,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.320Z",
+            "updated_at": "2025-06-03T09:58:31.320Z",
+            "phone_number": "+989756120117",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 78,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.322Z",
+            "updated_at": "2025-06-03T09:58:31.322Z",
+            "phone_number": "+989922670933",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 79,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.323Z",
+            "updated_at": "2025-06-03T09:58:31.323Z",
+            "phone_number": "+989468317675",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 80,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.325Z",
+            "updated_at": "2025-06-03T09:58:31.325Z",
+            "phone_number": "+989979948197",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 81,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.326Z",
+            "updated_at": "2025-06-03T09:58:31.326Z",
+            "phone_number": "+989725157066",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 82,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.328Z",
+            "updated_at": "2025-06-03T09:58:31.328Z",
+            "phone_number": "+989390102300",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 83,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.329Z",
+            "updated_at": "2025-06-03T09:58:31.329Z",
+            "phone_number": "+989756462570",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 84,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.331Z",
+            "updated_at": "2025-06-03T09:58:31.331Z",
+            "phone_number": "+989371986116",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 85,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.332Z",
+            "updated_at": "2025-06-03T09:58:31.332Z",
+            "phone_number": "+989245257995",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 86,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.334Z",
+            "updated_at": "2025-06-03T09:58:31.334Z",
+            "phone_number": "+989297484795",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 87,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.335Z",
+            "updated_at": "2025-06-03T09:58:31.335Z",
+            "phone_number": "+989373446497",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 88,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.337Z",
+            "updated_at": "2025-06-03T09:58:31.337Z",
+            "phone_number": "+989046811638",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 89,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.338Z",
+            "updated_at": "2025-06-03T09:58:31.338Z",
+            "phone_number": "+989889558497",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 90,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.340Z",
+            "updated_at": "2025-06-03T09:58:31.340Z",
+            "phone_number": "+989689272678",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 91,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.341Z",
+            "updated_at": "2025-06-03T09:58:31.341Z",
+            "phone_number": "+989619369189",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 92,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.343Z",
+            "updated_at": "2025-06-03T09:58:31.343Z",
+            "phone_number": "+989851881970",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 93,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.344Z",
+            "updated_at": "2025-06-03T09:58:31.344Z",
+            "phone_number": "+989601223192",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 94,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.346Z",
+            "updated_at": "2025-06-03T09:58:31.346Z",
+            "phone_number": "+989293210064",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 95,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.347Z",
+            "updated_at": "2025-06-03T09:58:31.347Z",
+            "phone_number": "+989377852994",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 96,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.349Z",
+            "updated_at": "2025-06-03T09:58:31.349Z",
+            "phone_number": "+989912988480",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 97,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.350Z",
+            "updated_at": "2025-06-03T09:58:31.350Z",
+            "phone_number": "+989493662581",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 98,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.352Z",
+            "updated_at": "2025-06-03T09:58:31.352Z",
+            "phone_number": "+989615990477",
+            "balance": "0",
+            "is_seller": false
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 99,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.354Z",
+            "updated_at": "2025-06-03T10:15:54.051Z",
+            "phone_number": "+989892512433",
+            "balance": "2280000",
+            "is_seller": true
+        }
+    },
+    {
+        "model": "credit_charge.user",
+        "pk": 100,
+        "fields": {
+            "created_at": "2025-06-03T09:58:31.355Z",
+            "updated_at": "2025-06-03T10:15:54.054Z",
+            "phone_number": "+989486018480",
+            "balance": "1555000",
+            "is_seller": true
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 1,
+        "fields": {
+            "created_at": "2025-06-03T10:05:53.639Z",
+            "updated_at": "2025-06-03T10:06:06.442Z",
+            "user": 100,
+            "status": "CONFIRMED",
+            "amount": "1000000",
+            "transaction_id": "cd122dfd-a7c0-4ce1-8c09-07286d4f3eec"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 2,
+        "fields": {
+            "created_at": "2025-06-03T10:05:56.462Z",
+            "updated_at": "2025-06-03T10:06:06.441Z",
+            "user": 99,
+            "status": "CONFIRMED",
+            "amount": "700000",
+            "transaction_id": "2641963c-0732-4ca5-af69-4030da1717e9"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 3,
+        "fields": {
+            "created_at": "2025-06-03T10:06:00.165Z",
+            "updated_at": "2025-06-03T10:06:06.439Z",
+            "user": 100,
+            "status": "CONFIRMED",
+            "amount": "250000",
+            "transaction_id": "8c75ca15-ff80-4308-aca4-ef7bd877cdbd"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 4,
+        "fields": {
+            "created_at": "2025-06-03T10:14:21.097Z",
+            "updated_at": "2025-06-03T10:16:05.286Z",
+            "user": 100,
+            "status": "FAILED",
+            "amount": "150000",
+            "transaction_id": "66e02db5-d403-4a93-b37f-aed6b78c2ea3"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 5,
+        "fields": {
+            "created_at": "2025-06-03T10:14:37.397Z",
+            "updated_at": "2025-06-03T10:15:54.054Z",
+            "user": 100,
+            "status": "CONFIRMED",
+            "amount": "75000",
+            "transaction_id": "29917429-cecb-4dd9-949d-96bdaf92fa77"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 6,
+        "fields": {
+            "created_at": "2025-06-03T10:14:54.345Z",
+            "updated_at": "2025-06-03T10:15:54.052Z",
+            "user": 100,
+            "status": "CONFIRMED",
+            "amount": "230000",
+            "transaction_id": "43912d3f-34e8-4432-8c1a-6bc44d6abf5b"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 7,
+        "fields": {
+            "created_at": "2025-06-03T10:15:05.538Z",
+            "updated_at": "2025-06-03T10:15:54.051Z",
+            "user": 99,
+            "status": "CONFIRMED",
+            "amount": "80000",
+            "transaction_id": "05820b5f-f3db-4dab-8c96-d419f18bba56"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 8,
+        "fields": {
+            "created_at": "2025-06-03T10:15:21.696Z",
+            "updated_at": "2025-06-03T10:16:05.284Z",
+            "user": 99,
+            "status": "FAILED",
+            "amount": "200000",
+            "transaction_id": "ffb11a02-ad2c-480f-9b1c-5ec15ac05235"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 9,
+        "fields": {
+            "created_at": "2025-06-03T10:15:30.738Z",
+            "updated_at": "2025-06-03T10:16:05.282Z",
+            "user": 99,
+            "status": "FAILED",
+            "amount": "430000",
+            "transaction_id": "b0612ef4-1849-4668-9916-def9d991ad7e"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 10,
+        "fields": {
+            "created_at": "2025-06-03T10:15:39.185Z",
+            "updated_at": "2025-06-03T10:15:54.048Z",
+            "user": 99,
+            "status": "CONFIRMED",
+            "amount": "1500000",
+            "transaction_id": "1bee455e-1b03-4b50-8d0d-b20160fc1f23"
+        }
+    }
+]

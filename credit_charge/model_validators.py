@@ -23,7 +23,7 @@ def validate_transaction_status(
     instance: "credit_charge.models.UserTransaction",
 ):
     previous_status = instance.tracker.previous("status")
-    if previous_status == credit_charge.consts.TransactionStatus.WAITING:
+    if previous_status == credit_charge.consts.TransactionStatus.WAITING or previous_status is None:
         return
     if previous_status != instance.status:
         raise ValidationError("Status cannot be changed.")
@@ -33,7 +33,7 @@ def validate_charge_status(
     instance: "credit_charge.models.Charge",
 ):
     previous_status = instance.tracker.previous("status")
-    if previous_status == credit_charge.consts.TransactionStatus.WAITING:
+    if previous_status == credit_charge.consts.TransactionStatus.WAITING or previous_status is None:
         return
     if previous_status != instance.status:
         raise ValidationError("Status cannot be changed.")

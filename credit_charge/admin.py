@@ -17,8 +17,11 @@ def confirm_charges_action(
 ):
     try:
         for charge in queryset.select_related("user"):
+            credit_charge.models.User.update_balance(
+                amount=charge.amount,
+                phone_number=charge.user.phone_number,
+            )
             charge.confirm_charge()
-            charge.user.update_balance(amount=charge.amount, user=charge.user)
 
         modeladmin.message_user(request, "تراکنش‌ها با موفقیت تأیید شدند.", level=messages.SUCCESS)
 
