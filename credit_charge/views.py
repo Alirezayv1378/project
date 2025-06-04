@@ -1,10 +1,18 @@
 import rest_framework.response
-from rest_framework import mixins, status, viewsets
+from rest_framework import mixins, permissions, status, viewsets
 
 import credit_charge.exceptions
 import credit_charge.models
 import credit_charge.serializers
 import credit_charge.services
+
+
+class IsSellerOrAuthenticated(permissions.BasePermission):
+    def has_permission(self, request, view):
+        user = request.user
+        if view.action != "create":
+            return user.is_authenticated
+        return user.is_seller and user.is_authenticated
 
 
 class UserViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
@@ -21,6 +29,7 @@ class ChargeViewSet(
 ):
     queryset = credit_charge.models.Charge.objects.all()
     lookup_field = "transaction_id"
+    permission_classes = [IsSellerOrAuthenticated]
 
     def get_serializer_class(self):
         if self.action == "create":
@@ -29,7 +38,7 @@ class ChargeViewSet(
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        serializer.is_valid()
         charge = credit_charge.services.create_charge(
             phone_number=serializer.validated_data["phone_number"],
             amount=serializer.validated_data["amount"],
@@ -46,6 +55,7 @@ class UserTransactionViewSet(
 ):
     queryset = credit_charge.models.UserTransaction.objects.all()
     lookup_field = "transaction_id"
+    permission_classes = [IsSellerOrAuthenticated]
 
     def get_serializer_class(self):
         if self.action == "create":
@@ -54,7 +64,7 @@ class UserTransactionViewSet(
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        serializer.is_valid()
 
         try:
             transaction = credit_charge.services.create_transaction(

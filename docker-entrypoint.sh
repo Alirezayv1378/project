@@ -16,10 +16,6 @@ fi
 
 if [ "$ENVIRONMENT" = "development" ]; then
     echo "Loading initial data..."
-    python manage.py loaddata data.json || {
-        echo "Loading json data failed"
-        exit 1
-    }
     python insert_init_data.py
 fi
 

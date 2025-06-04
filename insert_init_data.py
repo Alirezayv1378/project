@@ -7,7 +7,7 @@ load_dotenv()
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
 django.setup()
 
-from django.contrib.auth.models import User  # noqa:E402
+from credit_charge.models import User  # noqa:E402
 
 
 def update_password(username: str, password: str):
@@ -21,9 +21,15 @@ def init_admin_user():
     super_admin_username = os.getenv("SUPER_ADMIN_USERNAME")
     super_admin_email = os.getenv("SUPER_ADMIN_EMAIL")
     super_admin_password = os.getenv("SUPER_ADMIN_PASSWORD")
+    super_admin_phone_number = os.getenv("SUPER_ADMIN_PHONE_NUMBER")
 
     if not User.objects.filter(username=super_admin_username).exists():
-        User.objects.create_superuser(super_admin_username, super_admin_email, super_admin_password)
+        User.objects.create_superuser(
+            username=super_admin_username,
+            email=super_admin_email,
+            password=super_admin_password,
+            phone_number=super_admin_phone_number,
+        )
     else:
         update_password(super_admin_username, super_admin_password)
 

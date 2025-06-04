@@ -1,6 +1,7 @@
 import logging
 
 from django.contrib import admin, messages
+from django.contrib.auth import admin as auth_admin
 from django.db import models, transaction
 
 import credit_charge.models
@@ -49,12 +50,24 @@ def reject_charges_action(
 
 
 @admin.register(credit_charge.models.User)
-class UserAdmin(admin.ModelAdmin):
-    fields = ("phone_number", "balance", "is_seller")
-    list_display = ("phone_number", "balance", "is_seller")
+class UserAdmin(auth_admin.UserAdmin):
+    fieldsets = (
+        (None, {"fields": ("phone_number", "balance", "username", "password")}),
+        ("Permissions", {"fields": ("is_superuser", "is_staff", "is_active", "is_seller")}),
+    )
+    add_fieldsets = (
+        (
+            None,
+            {
+                "classes": ("wide",),
+                "fields": ("phone_number", "username", "password1", "password2", "is_seller"),
+            },
+        ),
+    )
+    list_display = ("phone_number", "balance", "is_seller", "is_staff", "is_superuser")
     search_fields = ("phone_number",)
     readonly_fields = ("balance",)
-    list_filter = ("is_seller",)
+    list_filter = ("is_seller", "is_staff", "is_superuser")
 
 
 @admin.register(credit_charge.models.Charge)

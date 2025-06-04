@@ -11,6 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ChargeSerializer(serializers.ModelSerializer):
     user = UserSerializer()
+
     class Meta:
         model = credit_charge.models.Charge
         fields = ("user", "amount", "transaction_id", "status")
@@ -19,6 +20,7 @@ class ChargeSerializer(serializers.ModelSerializer):
 class UserTransactionSerializer(serializers.ModelSerializer):
     seller = UserSerializer()
     receiver_user = UserSerializer()
+
     class Meta:
         model = credit_charge.models.UserTransaction
         fields = ("seller", "receiver_user", "amount", "status", "transaction_id", "description")
@@ -26,7 +28,7 @@ class UserTransactionSerializer(serializers.ModelSerializer):
 
 class CreateChargeRequestSerializer(serializers.Serializer):
     phone_number = serializers.CharField(max_length=16)
-    amount = serializers.DecimalField(max_digits=12, decimal_places=0)
+    amount = serializers.DecimalField(max_digits=12, decimal_places=0, min_value=0)
 
     def validate_phone_number(self, value):
         # Add more complex validation if needed
@@ -38,7 +40,7 @@ class CreateChargeRequestSerializer(serializers.Serializer):
 class CeateUserTransactionRequestSerializer(serializers.Serializer):
     seller_phone_number = serializers.CharField(max_length=16)
     receiver_phone_number = serializers.CharField(max_length=16)
-    amount = serializers.DecimalField(max_digits=12, decimal_places=0)
+    amount = serializers.DecimalField(max_digits=12, decimal_places=0, min_value=0)
 
     def validate_seller_phone_number(self, value):
         if not credit_charge.models.User.objects.filter(phone_number=value).exists():

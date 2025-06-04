@@ -3,6 +3,7 @@ import logging
 import uuid
 
 import model_utils
+from django.contrib.auth import models as django_auth_models
 from django.core import exceptions
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -16,7 +17,7 @@ import utils.models
 logger = logging.getLogger(__name__)
 
 
-class User(utils.models.CreateUpdateTracker):
+class User(django_auth_models.AbstractUser, utils.models.CreateUpdateTracker):
     phone_number = models.CharField(
         **utils.consts.nbfalse,
         max_length=16,

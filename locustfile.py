@@ -1,72 +1,116 @@
-import os
 import random
 
 import locust
 
-DJANGO_MANAGE = "docker-compose exec -i django-core python manage.py"
-
-USERNAME = os.getenv("SUPER_ADMIN_USERNAME")
-PASSWORD = os.getenv("SUPER_ADMIN_PASSWORD")
-
 CUSTOMER_PHONE_NUMBERS = [
-    "+989615990477",
-    "+989493662581",
-    "+989912988480",
-    "+989377852994",
-    "+989293210064",
-    "+989601223192",
-    "+989851881970",
-    "+989619369189",
-    "+989689272678",
-    "+989889558497",
+    "+989535399420",
+    "+989354097915",
+    "+989220966742",
+    "+989832388980",
+    "+989356916286",
+    "+989740500163",
+    "+989795247643",
+    "+989247353531",
+    "+989058336430",
+    "+989127550483",
 ]
 
-SELLER_PHONE_NUMBERS = ["+989486018480", "+989892512433"]
+
+SELLER_PHONE_NUMBERS = [
+    "+989097907343",
+    "+989203016403",
+    "+989004562348",
+    "+989020026132",
+    "+989058336430",
+    "+989080879790",
+]
 
 
 class APITestUser(locust.HttpUser):
-    wait_time = locust.between(1, 3)
+    wait_time = locust.between(0.01, 0.1)
 
     def on_start(self):
-        token = self.client.post("/api/v1/api-token-auth/", json={"username": USERNAME, "password": PASSWORD})
-        self.client.headers = {"Authorization": f"Token {token.json()['token']}", "Content-Type": "application/json"}
+        self.phone_number = random.choice(SELLER_PHONE_NUMBERS)  # noqa: S311
+        self.get_token()
+
+    def get_token(self):
+        response = self.client.post(
+            "/api/v1/token/",
+            json={"username": self.phone_number, "password": self.phone_number},
+            name="/api/v1/token/",
+        )
+        if response.status_code == 200:
+            data = response.json()
+            self.access_token = data.get("access")
+            self.refresh_token = data.get("refresh")
+            self.set_auth_header()
+        else:
+            response.failure("Login failed")
+
+    def refresh_token_and_retry(self, method, url, **kwargs):
+        refresh_response = self.client.post(
+            "/api/v1/token/refresh/",
+            json={"refresh": self.refresh_token},
+            name="/api/v1/token/refresh/",
+        )
+        if refresh_response.status_code == 200:
+            self.access_token = refresh_response.json().get("access")
+            self.set_auth_header()
+            return method(url, **kwargs)
+        else:
+            refresh_response.failure("Token refresh failed")
+            self.get_token()
+            return method(url, **kwargs)
+
+    def set_auth_header(self):
+        self.client.headers = {
+            "Authorization": f"Bearer {self.access_token}",
+            "Content-Type": "application/json",
+        }
+
+    def safe_get(self, url, **kwargs):
+        response = self.client.get(url, **kwargs)
+        if response.status_code == 401:
+            return self.refresh_token_and_retry(self.client.get, url, **kwargs)
+        return response
+
+    def safe_post(self, url, **kwargs):
+        response = self.client.post(url, **kwargs)
+        if response.status_code == 401:
+            return self.refresh_token_and_retry(self.client.post, url, **kwargs)
+        return response
 
     @locust.task(2)
     def list_users(self):
-        self.client.get("/api/v1/users/")
+        self.safe_get("/api/v1/users/", name="/api/v1/users/")
 
     @locust.task(2)
     def list_charges(self):
-        self.client.get("/api/v1/charges/")
+        self.safe_get("/api/v1/charges/", name="/api/v1/charges/")
 
     @locust.task(2)
     def list_transactions(self):
-        self.client.get("/api/v1/transactions/")
+        self.safe_get("/api/v1/transactions/", name="/api/v1/transactions/")
 
     @locust.task(1)
     def create_charge(self):
-        phone_number = random.choice(SELLER_PHONE_NUMBERS)  # noqa: S311
         amount = random.randint(100_000, 1_000_000)  # noqa: S311
-
-        self.client.post(
+        self.safe_post(
             "/api/v1/charges/",
-            json={
-                "phone_number": phone_number,
-                "amount": amount,
-            },
+            json={"phone_number": self.phone_number, "amount": amount},
+            name="/api/v1/charges/",
         )
 
     @locust.task(10)
     def create_user_transaction(self):
-        seller = random.choice(SELLER_PHONE_NUMBERS)  # noqa: S311
         receiver = random.choice(CUSTOMER_PHONE_NUMBERS)  # noqa: S311
         amount = random.randint(1, 10)  # noqa: S311
-
-        self.client.post(
+        self.safe_post(
             "/api/v1/transactions/",
             json={
-                "seller_phone_number": seller,
+                "seller_phone_number": self.phone_number,
                 "receiver_phone_number": receiver,
                 "amount": amount,
             },
+            name="/api/v1/transactions/",
         )

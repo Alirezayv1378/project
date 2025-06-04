@@ -1,399 +1,10 @@
 [
     {
-        "model": "admin.logentry",
+        "model": "credit_charge.user",
         "pk": 1,
         "fields": {
-            "action_time": "2025-06-03T09:58:54.370Z",
-            "user": 1,
-            "content_type": 7,
-            "object_id": "100",
-            "object_repr": "+989486018480",
-            "action_flag": 2,
-            "change_message": "[{\"changed\": {\"fields\": [\"\\u0641\\u0631\\u0648\\u0634\\u0646\\u062f\\u0647\"]}}]"
-        }
-    },
-    {
-        "model": "admin.logentry",
-        "pk": 2,
-        "fields": {
-            "action_time": "2025-06-03T09:58:58.828Z",
-            "user": 1,
-            "content_type": 7,
-            "object_id": "99",
-            "object_repr": "+989892512433",
-            "action_flag": 2,
-            "change_message": "[{\"changed\": {\"fields\": [\"\\u0641\\u0631\\u0648\\u0634\\u0646\\u062f\\u0647\"]}}]"
-        }
-    },
-    {
-        "model": "admin.logentry",
-        "pk": 3,
-        "fields": {
-            "action_time": "2025-06-03T10:05:22.636Z",
-            "user": 1,
-            "content_type": 8,
-            "object_id": "3",
-            "object_repr": "+989892512433 - CONFIRMED",
-            "action_flag": 3,
-            "change_message": ""
-        }
-    },
-    {
-        "model": "admin.logentry",
-        "pk": 4,
-        "fields": {
-            "action_time": "2025-06-03T10:05:42.400Z",
-            "user": 1,
-            "content_type": 8,
-            "object_id": "2",
-            "object_repr": "+989486018480 - CONFIRMED",
-            "action_flag": 3,
-            "change_message": ""
-        }
-    },
-    {
-        "model": "admin.logentry",
-        "pk": 5,
-        "fields": {
-            "action_time": "2025-06-03T10:05:42.400Z",
-            "user": 1,
-            "content_type": 8,
-            "object_id": "1",
-            "object_repr": "+989486018480 - WAITING",
-            "action_flag": 3,
-            "change_message": ""
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 1,
-        "fields": {
-            "name": "Can add log entry",
-            "content_type": 1,
-            "codename": "add_logentry"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 2,
-        "fields": {
-            "name": "Can change log entry",
-            "content_type": 1,
-            "codename": "change_logentry"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 3,
-        "fields": {
-            "name": "Can delete log entry",
-            "content_type": 1,
-            "codename": "delete_logentry"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 4,
-        "fields": {
-            "name": "Can view log entry",
-            "content_type": 1,
-            "codename": "view_logentry"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 5,
-        "fields": {
-            "name": "Can add permission",
-            "content_type": 2,
-            "codename": "add_permission"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 6,
-        "fields": {
-            "name": "Can change permission",
-            "content_type": 2,
-            "codename": "change_permission"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 7,
-        "fields": {
-            "name": "Can delete permission",
-            "content_type": 2,
-            "codename": "delete_permission"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 8,
-        "fields": {
-            "name": "Can view permission",
-            "content_type": 2,
-            "codename": "view_permission"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 9,
-        "fields": {
-            "name": "Can add group",
-            "content_type": 3,
-            "codename": "add_group"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 10,
-        "fields": {
-            "name": "Can change group",
-            "content_type": 3,
-            "codename": "change_group"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 11,
-        "fields": {
-            "name": "Can delete group",
-            "content_type": 3,
-            "codename": "delete_group"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 12,
-        "fields": {
-            "name": "Can view group",
-            "content_type": 3,
-            "codename": "view_group"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 13,
-        "fields": {
-            "name": "Can add user",
-            "content_type": 4,
-            "codename": "add_user"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 14,
-        "fields": {
-            "name": "Can change user",
-            "content_type": 4,
-            "codename": "change_user"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 15,
-        "fields": {
-            "name": "Can delete user",
-            "content_type": 4,
-            "codename": "delete_user"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 16,
-        "fields": {
-            "name": "Can view user",
-            "content_type": 4,
-            "codename": "view_user"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 17,
-        "fields": {
-            "name": "Can add content type",
-            "content_type": 5,
-            "codename": "add_contenttype"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 18,
-        "fields": {
-            "name": "Can change content type",
-            "content_type": 5,
-            "codename": "change_contenttype"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 19,
-        "fields": {
-            "name": "Can delete content type",
-            "content_type": 5,
-            "codename": "delete_contenttype"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 20,
-        "fields": {
-            "name": "Can view content type",
-            "content_type": 5,
-            "codename": "view_contenttype"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 21,
-        "fields": {
-            "name": "Can add session",
-            "content_type": 6,
-            "codename": "add_session"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 22,
-        "fields": {
-            "name": "Can change session",
-            "content_type": 6,
-            "codename": "change_session"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 23,
-        "fields": {
-            "name": "Can delete session",
-            "content_type": 6,
-            "codename": "delete_session"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 24,
-        "fields": {
-            "name": "Can view session",
-            "content_type": 6,
-            "codename": "view_session"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 25,
-        "fields": {
-            "name": "Can add کاربر",
-            "content_type": 7,
-            "codename": "add_user"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 26,
-        "fields": {
-            "name": "Can change کاربر",
-            "content_type": 7,
-            "codename": "change_user"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 27,
-        "fields": {
-            "name": "Can delete کاربر",
-            "content_type": 7,
-            "codename": "delete_user"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 28,
-        "fields": {
-            "name": "Can view کاربر",
-            "content_type": 7,
-            "codename": "view_user"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 29,
-        "fields": {
-            "name": "Can add شارژ حساب",
-            "content_type": 8,
-            "codename": "add_charge"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 30,
-        "fields": {
-            "name": "Can change شارژ حساب",
-            "content_type": 8,
-            "codename": "change_charge"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 31,
-        "fields": {
-            "name": "Can delete شارژ حساب",
-            "content_type": 8,
-            "codename": "delete_charge"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 32,
-        "fields": {
-            "name": "Can view شارژ حساب",
-            "content_type": 8,
-            "codename": "view_charge"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 33,
-        "fields": {
-            "name": "Can add تراکنش بین کاربران",
-            "content_type": 9,
-            "codename": "add_usertransaction"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 34,
-        "fields": {
-            "name": "Can change تراکنش بین کاربران",
-            "content_type": 9,
-            "codename": "change_usertransaction"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 35,
-        "fields": {
-            "name": "Can delete تراکنش بین کاربران",
-            "content_type": 9,
-            "codename": "delete_usertransaction"
-        }
-    },
-    {
-        "model": "auth.permission",
-        "pk": 36,
-        "fields": {
-            "name": "Can view تراکنش بین کاربران",
-            "content_type": 9,
-            "codename": "view_usertransaction"
-        }
-    },
-    {
-        "model": "auth.user",
-        "pk": 1,
-        "fields": {
-            "password": "pbkdf2_sha256$1000000$sXTy4QBhpNPEtAS1sgNJ06$wN26wsZNj9URM+g9J6xAZYKSASl1WlOEHdbX8k+rWm0=",
-            "last_login": "2025-06-03T09:58:44.920Z",
+            "password": "pbkdf2_sha256$1000000$U54Ifzsy9PCjXyYqHh1nJA$sMOYatjhvpvIylV9fm7lkN0d6AGF639Xtc12rShcjzA=",
+            "last_login": "2025-06-04T10:56:58.270Z",
             "is_superuser": true,
             "username": "super",
             "first_name": "",
@@ -401,1189 +12,2291 @@
             "email": "super@super.com",
             "is_staff": true,
             "is_active": true,
-            "date_joined": "2025-06-03T09:50:46.278Z",
+            "date_joined": "2025-06-04T10:25:50.532Z",
+            "created_at": "2025-06-04T10:25:50.713Z",
+            "updated_at": "2025-06-04T10:25:50.713Z",
+            "phone_number": "+989393292651",
+            "balance": "0",
+            "is_seller": false,
             "groups": [],
             "user_permissions": []
         }
     },
     {
-        "model": "contenttypes.contenttype",
-        "pk": 1,
-        "fields": {
-            "app_label": "admin",
-            "model": "logentry"
-        }
-    },
-    {
-        "model": "contenttypes.contenttype",
-        "pk": 2,
-        "fields": {
-            "app_label": "auth",
-            "model": "permission"
-        }
-    },
-    {
-        "model": "contenttypes.contenttype",
-        "pk": 3,
-        "fields": {
-            "app_label": "auth",
-            "model": "group"
-        }
-    },
-    {
-        "model": "contenttypes.contenttype",
-        "pk": 4,
-        "fields": {
-            "app_label": "auth",
-            "model": "user"
-        }
-    },
-    {
-        "model": "contenttypes.contenttype",
-        "pk": 5,
-        "fields": {
-            "app_label": "contenttypes",
-            "model": "contenttype"
-        }
-    },
-    {
-        "model": "contenttypes.contenttype",
-        "pk": 6,
-        "fields": {
-            "app_label": "sessions",
-            "model": "session"
-        }
-    },
-    {
-        "model": "contenttypes.contenttype",
-        "pk": 7,
-        "fields": {
-            "app_label": "credit_charge",
-            "model": "user"
-        }
-    },
-    {
-        "model": "contenttypes.contenttype",
-        "pk": 8,
-        "fields": {
-            "app_label": "credit_charge",
-            "model": "charge"
-        }
-    },
-    {
-        "model": "contenttypes.contenttype",
-        "pk": 9,
-        "fields": {
-            "app_label": "credit_charge",
-            "model": "usertransaction"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "a8keipz6npxy1hdpt3sdi3npnthssle2",
-        "fields": {
-            "session_data": ".eJxVjMsOwiAQRf-FtSGMhJdL934DGZhBqgaS0q4a_12bdKHbe865m4i4LjWug-c4kbgIEKffLWF-ctsBPbDdu8y9LfOU5K7Igw5568Sv6-H-HVQc9Vur4jMwISRQhXxhr4msAweKHZO2QdniHWFhFUCbHExmC57P2hBTEu8P_zU4nQ:1uMOPs:PaZLfanA6vexw_W7N0sGIKnbwzHzfurWFk66fHq1OU0",
-            "expire_date": "2025-06-17T09:58:44.922Z"
-        }
-    },
-    {
-        "model": "credit_charge.user",
-        "pk": 1,
-        "fields": {
-            "created_at": "2025-06-03T09:58:31.195Z",
-            "updated_at": "2025-06-03T09:58:31.195Z",
-            "phone_number": "+989741369760",
-            "balance": "0",
-            "is_seller": false
-        }
-    },
-    {
         "model": "credit_charge.user",
         "pk": 2,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.198Z",
-            "updated_at": "2025-06-03T09:58:31.198Z",
-            "phone_number": "+989966758851",
+            "password": "pbkdf2_sha256$1000000$WQmorVT9C370TTQzUNAaRH$rOJldDbm6DGHvPKbBQV1BdWaGWhF68DFvpvD4/bFJDk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989535399420",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:25.104Z",
+            "created_at": "2025-06-04T10:26:25.111Z",
+            "updated_at": "2025-06-04T10:26:25.308Z",
+            "phone_number": "+989535399420",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 3,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.200Z",
-            "updated_at": "2025-06-03T09:58:31.200Z",
-            "phone_number": "+989707921964",
+            "password": "pbkdf2_sha256$1000000$iCKg1JNN67VV3gndxCa029$MB1/io+fD+WyINWC3NnaQbwHk4CY5A7iTiwKY4J+nZU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989354097915",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:25.311Z",
+            "created_at": "2025-06-04T10:26:25.311Z",
+            "updated_at": "2025-06-04T10:26:25.499Z",
+            "phone_number": "+989354097915",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 4,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.201Z",
-            "updated_at": "2025-06-03T09:58:31.201Z",
-            "phone_number": "+989136444108",
+            "password": "pbkdf2_sha256$1000000$hSgWZnBh8WmWfgHY48A4ok$YQdJ6CcON+5CR5y//EIEiHuAFpPGu79bGw9++u3/fF4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989220966742",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:25.502Z",
+            "created_at": "2025-06-04T10:26:25.503Z",
+            "updated_at": "2025-06-04T10:26:25.689Z",
+            "phone_number": "+989220966742",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 5,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.203Z",
-            "updated_at": "2025-06-03T09:58:31.203Z",
-            "phone_number": "+989843607349",
+            "password": "pbkdf2_sha256$1000000$Atms5bK1pgIMMkMhg5jJ4B$dCXMPZdvF2Tjq0apWM8nII53Gh9A755kYIei8AWRbfA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989266210447",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:25.693Z",
+            "created_at": "2025-06-04T10:26:25.693Z",
+            "updated_at": "2025-06-04T10:26:25.881Z",
+            "phone_number": "+989266210447",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 6,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.205Z",
-            "updated_at": "2025-06-03T09:58:31.205Z",
-            "phone_number": "+989948089909",
+            "password": "pbkdf2_sha256$1000000$UikJvEzkDMjbm338FXoGIO$ve0TjUBFudMVcGNAGu0Hkz6HmD6K4t7RXs//5oZ+MGc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989832388980",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:25.885Z",
+            "created_at": "2025-06-04T10:26:25.885Z",
+            "updated_at": "2025-06-04T10:26:26.073Z",
+            "phone_number": "+989832388980",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 7,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.207Z",
-            "updated_at": "2025-06-03T09:58:31.207Z",
-            "phone_number": "+989019950614",
+            "password": "pbkdf2_sha256$1000000$vzQpieLEof9Pq02ChTfMZb$FjnMh9YhKQVCpKec/TsU0ralWovc7gcbntr/Mz3TA0I=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989709764918",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:26.075Z",
+            "created_at": "2025-06-04T10:26:26.075Z",
+            "updated_at": "2025-06-04T10:26:26.266Z",
+            "phone_number": "+989709764918",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 8,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.209Z",
-            "updated_at": "2025-06-03T09:58:31.209Z",
-            "phone_number": "+989731341803",
+            "password": "pbkdf2_sha256$1000000$DqbEUNTbOLW16iRfqHJ1x2$EvzL91p+T3T0tDULmmuWVpFncqVYLfdfz2+N4Bw8QMM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989356916286",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:26.268Z",
+            "created_at": "2025-06-04T10:26:26.269Z",
+            "updated_at": "2025-06-04T10:26:26.456Z",
+            "phone_number": "+989356916286",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 9,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.210Z",
-            "updated_at": "2025-06-03T09:58:31.210Z",
-            "phone_number": "+989673313585",
+            "password": "pbkdf2_sha256$1000000$WcHjnpjyQFtjK3On2RFZU6$QOPF+WN3x+6okl6leBFfkoHpEFL9xtohKMQ01RBD84g=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989570758851",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:26.458Z",
+            "created_at": "2025-06-04T10:26:26.459Z",
+            "updated_at": "2025-06-04T10:26:26.648Z",
+            "phone_number": "+989570758851",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 10,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.212Z",
-            "updated_at": "2025-06-03T09:58:31.212Z",
-            "phone_number": "+989283336420",
+            "password": "pbkdf2_sha256$1000000$gzhUlRNDok5vpafGtEvaIl$9zpe4xvpa1zeqx+PSii2wxOCmsu+1Jyzl9NceXaDBi4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989740500163",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:26.650Z",
+            "created_at": "2025-06-04T10:26:26.650Z",
+            "updated_at": "2025-06-04T10:26:26.838Z",
+            "phone_number": "+989740500163",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 11,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.214Z",
-            "updated_at": "2025-06-03T09:58:31.214Z",
-            "phone_number": "+989065875944",
+            "password": "pbkdf2_sha256$1000000$XRqjapE3IAS8JB5dE8CDOI$0tsb72bDEONoPBSA+3PYHNaODTraEFT599XkSlleFI0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989339402842",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:26.841Z",
+            "created_at": "2025-06-04T10:26:26.841Z",
+            "updated_at": "2025-06-04T10:26:27.027Z",
+            "phone_number": "+989339402842",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 12,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.216Z",
-            "updated_at": "2025-06-03T09:58:31.216Z",
-            "phone_number": "+989318420774",
+            "password": "pbkdf2_sha256$1000000$UVqRwJ3JeVqmu2zAuxLLbB$jAcsFmOFSAajdIIcWWKPHSagIAHgBMDieIDSXra0eJQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989795247643",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:27.029Z",
+            "created_at": "2025-06-04T10:26:27.029Z",
+            "updated_at": "2025-06-04T10:26:27.219Z",
+            "phone_number": "+989795247643",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 13,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.217Z",
-            "updated_at": "2025-06-03T09:58:31.217Z",
-            "phone_number": "+989926084267",
+            "password": "pbkdf2_sha256$1000000$aCakz1sdi8TLbhkl6mil98$Mj42ERZdkA86STCzPmeD/YrpmvKEYgzmepuoYmmftLU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989397565873",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:27.222Z",
+            "created_at": "2025-06-04T10:26:27.222Z",
+            "updated_at": "2025-06-04T10:26:27.410Z",
+            "phone_number": "+989397565873",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 14,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.219Z",
-            "updated_at": "2025-06-03T09:58:31.219Z",
-            "phone_number": "+989235910052",
+            "password": "pbkdf2_sha256$1000000$0U0LUCj5K3jE3xgkrCBZBG$hbBioK+NyJFAW1RMnrj4uniM1k0Jly84Y5IeKNPYATk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989247353531",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:27.412Z",
+            "created_at": "2025-06-04T10:26:27.412Z",
+            "updated_at": "2025-06-04T10:26:27.602Z",
+            "phone_number": "+989247353531",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 15,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.220Z",
-            "updated_at": "2025-06-03T09:58:31.220Z",
-            "phone_number": "+989190765694",
+            "password": "pbkdf2_sha256$1000000$3sx6ZkmaK2v0L3wm593u6V$35OGrUg8HfLiUOtWB99zffzltHP+eFi1g+JPsY5xdNk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989155077357",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:27.605Z",
+            "created_at": "2025-06-04T10:26:27.605Z",
+            "updated_at": "2025-06-04T10:26:27.798Z",
+            "phone_number": "+989155077357",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 16,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.222Z",
-            "updated_at": "2025-06-03T09:58:31.222Z",
-            "phone_number": "+989201040153",
-            "balance": "0",
-            "is_seller": false
+            "password": "pbkdf2_sha256$1000000$fQBc1GOTei7VeAVKXXgtrl$mLIXeAoPj8V1/XAuaf2dXj8P2LFhMDQSEwSpS6nSAc4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989058336430",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:27.800Z",
+            "created_at": "2025-06-04T10:26:27.800Z",
+            "updated_at": "2025-06-04T11:01:02.486Z",
+            "phone_number": "+989058336430",
+            "balance": "3000000",
+            "is_seller": true,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 17,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.223Z",
-            "updated_at": "2025-06-03T09:58:31.223Z",
-            "phone_number": "+989681340891",
+            "password": "pbkdf2_sha256$1000000$P2bTueHGioq0Bz4kGko0By$4JXvDukw78Xvq3NUNMxDuZUyE9FbKb3RvvJiKDzIT/8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989601491425",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:27.990Z",
+            "created_at": "2025-06-04T10:26:27.991Z",
+            "updated_at": "2025-06-04T10:26:28.181Z",
+            "phone_number": "+989601491425",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 18,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.225Z",
-            "updated_at": "2025-06-03T09:58:31.225Z",
-            "phone_number": "+989304582234",
-            "balance": "0",
-            "is_seller": false
+            "password": "pbkdf2_sha256$1000000$YS9aGdOueURAebQTA7fkvC$ibOI39ufLluUH2D+PnvOxuPYhXgBfufMQImYl05k8NU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989004562348",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:28.184Z",
+            "created_at": "2025-06-04T10:26:28.184Z",
+            "updated_at": "2025-06-04T11:01:02.490Z",
+            "phone_number": "+989004562348",
+            "balance": "3000000",
+            "is_seller": true,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 19,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.227Z",
-            "updated_at": "2025-06-03T09:58:31.227Z",
-            "phone_number": "+989792613756",
+            "password": "pbkdf2_sha256$1000000$Wl4yFAdOItsRis2sCebKRq$XVrNBE78Aiab+EAmDCYkkc/45JuKi5OMwj0xEHPrEzc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989127550483",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:28.374Z",
+            "created_at": "2025-06-04T10:26:28.374Z",
+            "updated_at": "2025-06-04T10:26:28.564Z",
+            "phone_number": "+989127550483",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 20,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.228Z",
-            "updated_at": "2025-06-03T09:58:31.228Z",
-            "phone_number": "+989717294272",
+            "password": "pbkdf2_sha256$1000000$hRVOoTqqRitQPIHqbTv4EK$2jm88xEM9PMizQRXonD9JgRAc2b5v6ujLDR5oYnSJNU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989465886127",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:28.567Z",
+            "created_at": "2025-06-04T10:26:28.567Z",
+            "updated_at": "2025-06-04T10:26:28.757Z",
+            "phone_number": "+989465886127",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 21,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.230Z",
-            "updated_at": "2025-06-03T09:58:31.230Z",
-            "phone_number": "+989908681055",
+            "password": "pbkdf2_sha256$1000000$8aLvM2pbXCmuiRYIjvh4uz$sbWVe36fxnLhtj6I+1pG4Qu/r33TJ3lChtmT2xWE/WY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989528617272",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:28.760Z",
+            "created_at": "2025-06-04T10:26:28.760Z",
+            "updated_at": "2025-06-04T10:26:28.948Z",
+            "phone_number": "+989528617272",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 22,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.231Z",
-            "updated_at": "2025-06-03T09:58:31.231Z",
-            "phone_number": "+989772033198",
+            "password": "pbkdf2_sha256$1000000$HBBlTFDheijzKHt5Ab68gg$BnIY+1GFO6OZAbP42Oqq+o26WkdT2dU8FqCCDgcEcc8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989904950456",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:28.951Z",
+            "created_at": "2025-06-04T10:26:28.951Z",
+            "updated_at": "2025-06-04T10:26:29.139Z",
+            "phone_number": "+989904950456",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 23,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.232Z",
-            "updated_at": "2025-06-03T09:58:31.232Z",
-            "phone_number": "+989953724926",
+            "password": "pbkdf2_sha256$1000000$W873HdbE9TO5UhZdQDZFd3$4vLkJ9fJlzmDqT7tB/GeyrlSTTPaL7q8QvufXziDJGM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989315401122",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:29.141Z",
+            "created_at": "2025-06-04T10:26:29.141Z",
+            "updated_at": "2025-06-04T10:26:29.327Z",
+            "phone_number": "+989315401122",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 24,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.234Z",
-            "updated_at": "2025-06-03T09:58:31.234Z",
-            "phone_number": "+989232710377",
+            "password": "pbkdf2_sha256$1000000$vfi2wpAAlrIM7ipStjWTjA$OE7QZH/gWUnkx4R15vTEXMdNp2BNXaWUpIaWWUADdmM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989177053149",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:29.330Z",
+            "created_at": "2025-06-04T10:26:29.330Z",
+            "updated_at": "2025-06-04T10:26:29.519Z",
+            "phone_number": "+989177053149",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 25,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.235Z",
-            "updated_at": "2025-06-03T09:58:31.235Z",
-            "phone_number": "+989024705575",
+            "password": "pbkdf2_sha256$1000000$8I8AsdjuP6INB4uAr8PdxM$Q31+vAwrDdZFu257MjX5iYpuiAGac8KkB+eZ29zvrfM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989391861352",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:29.521Z",
+            "created_at": "2025-06-04T10:26:29.521Z",
+            "updated_at": "2025-06-04T10:26:29.710Z",
+            "phone_number": "+989391861352",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 26,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.237Z",
-            "updated_at": "2025-06-03T09:58:31.237Z",
-            "phone_number": "+989008020305",
+            "password": "pbkdf2_sha256$1000000$2c61oyjgt4uP03z0QHQlv6$ZO6E3ymdh27XPlcD8BvxCy6K255t+AurWJccwsNn5Tk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989610059699",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:29.712Z",
+            "created_at": "2025-06-04T10:26:29.713Z",
+            "updated_at": "2025-06-04T10:26:29.901Z",
+            "phone_number": "+989610059699",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 27,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.238Z",
-            "updated_at": "2025-06-03T09:58:31.238Z",
-            "phone_number": "+989414828214",
+            "password": "pbkdf2_sha256$1000000$9S7xS2hfBVLBXgFqdlBrhh$RMrHjM/xF1VxLhuBenj0dEjbzsQp6erVQxtZnKd8Lfk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989740590874",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:29.904Z",
+            "created_at": "2025-06-04T10:26:29.904Z",
+            "updated_at": "2025-06-04T10:26:30.092Z",
+            "phone_number": "+989740590874",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 28,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.240Z",
-            "updated_at": "2025-06-03T09:58:31.240Z",
-            "phone_number": "+989685256098",
+            "password": "pbkdf2_sha256$1000000$lJSD9m1NBSLYTHvQ6V9ixn$5nONVFrDWPQVbfiLt2TSdP8xr3ATrduhO7+LW/7iaNA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989100248249",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:30.095Z",
+            "created_at": "2025-06-04T10:26:30.095Z",
+            "updated_at": "2025-06-04T10:26:30.283Z",
+            "phone_number": "+989100248249",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 29,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.241Z",
-            "updated_at": "2025-06-03T09:58:31.241Z",
-            "phone_number": "+989178177650",
+            "password": "pbkdf2_sha256$1000000$1ZTWnmB2Rcyo4jp2b0bBL4$hO+qh5wKeU97mQpImiZp3OWd4PgH9B7TCy4J6sxyqgE=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989935861081",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:30.286Z",
+            "created_at": "2025-06-04T10:26:30.286Z",
+            "updated_at": "2025-06-04T10:26:30.476Z",
+            "phone_number": "+989935861081",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 30,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.243Z",
-            "updated_at": "2025-06-03T09:58:31.243Z",
-            "phone_number": "+989857198298",
+            "password": "pbkdf2_sha256$1000000$0F7S2AhJKKIkQKnMQqZ8ee$rkiNEEZe7fiRz5ybtsOml2icBg9k8u/MUDVfVyjhyXE=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989485209690",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:30.478Z",
+            "created_at": "2025-06-04T10:26:30.478Z",
+            "updated_at": "2025-06-04T10:26:30.667Z",
+            "phone_number": "+989485209690",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 31,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.244Z",
-            "updated_at": "2025-06-03T09:58:31.244Z",
-            "phone_number": "+989829186035",
+            "password": "pbkdf2_sha256$1000000$BwgpdCz9grufz86cjIBeKa$tmyKvYKKB61bi7JMYrQbUyb2cXPorM94QSXkbSLeRg4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989668843944",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:30.670Z",
+            "created_at": "2025-06-04T10:26:30.670Z",
+            "updated_at": "2025-06-04T10:26:30.858Z",
+            "phone_number": "+989668843944",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 32,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.246Z",
-            "updated_at": "2025-06-03T09:58:31.246Z",
-            "phone_number": "+989323714082",
+            "password": "pbkdf2_sha256$1000000$HXNTkkQQwrPRDjHRc531kf$qCeL373Bt0JCN1JmzKad+hMl06PWE5Iobwg7b0nGVZI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989310236705",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:30.862Z",
+            "created_at": "2025-06-04T10:26:30.862Z",
+            "updated_at": "2025-06-04T10:26:31.051Z",
+            "phone_number": "+989310236705",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 33,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.247Z",
-            "updated_at": "2025-06-03T09:58:31.247Z",
-            "phone_number": "+989648413171",
+            "password": "pbkdf2_sha256$1000000$qdBSHw5BR3og2KE3Cj3g8x$Ql4d2yJ346gqwKmJQfg+3IucgaRLiuHJAUbP0SLkU7U=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989652775936",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:31.054Z",
+            "created_at": "2025-06-04T10:26:31.054Z",
+            "updated_at": "2025-06-04T10:26:31.244Z",
+            "phone_number": "+989652775936",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 34,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.249Z",
-            "updated_at": "2025-06-03T09:58:31.249Z",
-            "phone_number": "+989928870190",
+            "password": "pbkdf2_sha256$1000000$rapyufLpPBsUahgnvnBS7h$TBEAaJtDu98cdV6Dvt1NyPwuv6q0G7UnrQOHElqed1E=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989347211343",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:31.247Z",
+            "created_at": "2025-06-04T10:26:31.247Z",
+            "updated_at": "2025-06-04T10:26:31.434Z",
+            "phone_number": "+989347211343",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 35,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.251Z",
-            "updated_at": "2025-06-03T09:58:31.251Z",
-            "phone_number": "+989355863936",
+            "password": "pbkdf2_sha256$1000000$GtnGBeUskdvmDwkgqlvK6Y$XZ3+9Vg7MuOTNBXe5mrQVMuxrirK4P+coM/28LvcFA4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989915274234",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:31.437Z",
+            "created_at": "2025-06-04T10:26:31.437Z",
+            "updated_at": "2025-06-04T10:26:31.626Z",
+            "phone_number": "+989915274234",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 36,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.253Z",
-            "updated_at": "2025-06-03T09:58:31.253Z",
-            "phone_number": "+989815163784",
+            "password": "pbkdf2_sha256$1000000$ryhrF7DAOvJppweWHpTNTo$ecXGIr8Tg+dCs4nxZpjqIoWErtP3hS3Vld+B4h/zsNk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989725380381",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:31.629Z",
+            "created_at": "2025-06-04T10:26:31.629Z",
+            "updated_at": "2025-06-04T10:26:31.817Z",
+            "phone_number": "+989725380381",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 37,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.255Z",
-            "updated_at": "2025-06-03T09:58:31.255Z",
-            "phone_number": "+989991007027",
+            "password": "pbkdf2_sha256$1000000$P6WtC9HiMQUSbYwP6ZpLS9$qrlhh4cWSFGvx9s0hW80fU1LGQDu1evXv/uoHaFwLcc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989421451744",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:31.820Z",
+            "created_at": "2025-06-04T10:26:31.820Z",
+            "updated_at": "2025-06-04T10:26:32.008Z",
+            "phone_number": "+989421451744",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 38,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.256Z",
-            "updated_at": "2025-06-03T09:58:31.256Z",
-            "phone_number": "+989509864811",
+            "password": "pbkdf2_sha256$1000000$lgS01QGqiBLpkYmEqinLlN$T6NmjoLpddDncNi73/AJP4DDveC/wSydRMBi5N5BxtU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989293051908",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:32.011Z",
+            "created_at": "2025-06-04T10:26:32.011Z",
+            "updated_at": "2025-06-04T10:26:32.198Z",
+            "phone_number": "+989293051908",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 39,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.258Z",
-            "updated_at": "2025-06-03T09:58:31.258Z",
-            "phone_number": "+989680761129",
+            "password": "pbkdf2_sha256$1000000$FI81yYUhst29bmw0OcF5aM$4wl691kzoexY1bT+N/EVWJO2ZaIItIAojVDacLi8zOk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989845007763",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:32.200Z",
+            "created_at": "2025-06-04T10:26:32.200Z",
+            "updated_at": "2025-06-04T10:26:32.388Z",
+            "phone_number": "+989845007763",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 40,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.259Z",
-            "updated_at": "2025-06-03T09:58:31.259Z",
-            "phone_number": "+989967376486",
+            "password": "pbkdf2_sha256$1000000$qoFFO8GSKfgzCpF2Qqa92c$lxNvAWJM0a/R7q8MBWVGq4oXknfZi35mQp46v81SGNQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989170073026",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:32.391Z",
+            "created_at": "2025-06-04T10:26:32.391Z",
+            "updated_at": "2025-06-04T10:26:32.578Z",
+            "phone_number": "+989170073026",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 41,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.261Z",
-            "updated_at": "2025-06-03T09:58:31.261Z",
-            "phone_number": "+989683471242",
+            "password": "pbkdf2_sha256$1000000$ADKjaKusW02GPTrTNtjEBi$w5WQWlCLbttwnk5uG5r0XLiiP0jj2nPKA70+drrf2yI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989081597373",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:32.581Z",
+            "created_at": "2025-06-04T10:26:32.582Z",
+            "updated_at": "2025-06-04T10:26:32.769Z",
+            "phone_number": "+989081597373",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 42,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.262Z",
-            "updated_at": "2025-06-03T09:58:31.262Z",
-            "phone_number": "+989765689970",
+            "password": "pbkdf2_sha256$1000000$sm2Dy7Hbb0tvIXWqjBJ9ey$f365xoaLNjCxA0Qc9ocJBikW8kMSy4bTI1/aXpKBjG8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989748254548",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:32.772Z",
+            "created_at": "2025-06-04T10:26:32.772Z",
+            "updated_at": "2025-06-04T10:26:32.960Z",
+            "phone_number": "+989748254548",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 43,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.264Z",
-            "updated_at": "2025-06-03T09:58:31.264Z",
-            "phone_number": "+989894998769",
+            "password": "pbkdf2_sha256$1000000$GSZLPaFBKX2nBy7kahDe5N$Jy0/BGsFHkHiEnG0cQawMcVY2/OahQkBH2rcAvqczGg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989873575950",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:32.963Z",
+            "created_at": "2025-06-04T10:26:32.963Z",
+            "updated_at": "2025-06-04T10:26:33.180Z",
+            "phone_number": "+989873575950",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 44,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.265Z",
-            "updated_at": "2025-06-03T09:58:31.265Z",
-            "phone_number": "+989579953951",
+            "password": "pbkdf2_sha256$1000000$oasA2fdexrzcD5C2Rc3AH1$5+uzq9HUDk97szqVXgQgu/wZOr0JwoVONU5ljkTZi0Q=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989329714638",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:33.183Z",
+            "created_at": "2025-06-04T10:26:33.183Z",
+            "updated_at": "2025-06-04T10:26:33.370Z",
+            "phone_number": "+989329714638",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 45,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.267Z",
-            "updated_at": "2025-06-03T09:58:31.267Z",
-            "phone_number": "+989444161742",
+            "password": "pbkdf2_sha256$1000000$oSsQMRlSjAwWDA5Uzm9tIO$vSW6M9cvBxHk6jbhkRiAY/dosye38FVMTjfRYncbsA4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989521667352",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:33.373Z",
+            "created_at": "2025-06-04T10:26:33.373Z",
+            "updated_at": "2025-06-04T10:26:33.562Z",
+            "phone_number": "+989521667352",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 46,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.268Z",
-            "updated_at": "2025-06-03T09:58:31.268Z",
-            "phone_number": "+989629185755",
+            "password": "pbkdf2_sha256$1000000$w1eRUpPtq4hc9zJCs4WuxD$GHIEZalkqNFck+OQO0VnyV/iNlYTibJpDEkr0nyJzEU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989938924877",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:33.565Z",
+            "created_at": "2025-06-04T10:26:33.565Z",
+            "updated_at": "2025-06-04T10:26:33.753Z",
+            "phone_number": "+989938924877",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 47,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.269Z",
-            "updated_at": "2025-06-03T09:58:31.269Z",
-            "phone_number": "+989734512641",
+            "password": "pbkdf2_sha256$1000000$Ucevn9JC0bU9YYOyHdK6GE$wbQZx34edSqzW3avbo+4uzdXCWCozj1ep9+hsU9RsBI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989149510673",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:33.755Z",
+            "created_at": "2025-06-04T10:26:33.755Z",
+            "updated_at": "2025-06-04T10:26:33.943Z",
+            "phone_number": "+989149510673",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 48,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.271Z",
-            "updated_at": "2025-06-03T09:58:31.271Z",
-            "phone_number": "+989975502284",
+            "password": "pbkdf2_sha256$1000000$8GBVVRpFKmtxVV6Xfr4zQz$BnSEAsbYpavlQvu78D0oci8934X0GYxqoWY/bSVExE8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989103423827",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:33.946Z",
+            "created_at": "2025-06-04T10:26:33.946Z",
+            "updated_at": "2025-06-04T10:26:34.135Z",
+            "phone_number": "+989103423827",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 49,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.272Z",
-            "updated_at": "2025-06-03T09:58:31.272Z",
-            "phone_number": "+989109385970",
+            "password": "pbkdf2_sha256$1000000$ZMkzAZoKcJfiYiilz1Ua2f$0PdKqdPyEHVCDibceF3ivjuneun+0cp1TpHLOsiceT4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989255819294",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:34.138Z",
+            "created_at": "2025-06-04T10:26:34.138Z",
+            "updated_at": "2025-06-04T10:26:34.338Z",
+            "phone_number": "+989255819294",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 50,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.274Z",
-            "updated_at": "2025-06-03T09:58:31.274Z",
-            "phone_number": "+989748890337",
+            "password": "pbkdf2_sha256$1000000$4SKcmJlwRuV33Dz65dGZuf$Ow0exAeBE/2ZN5vqdqPyNtDEjidSI/UbeOVyqppU2hg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989273105054",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:34.342Z",
+            "created_at": "2025-06-04T10:26:34.342Z",
+            "updated_at": "2025-06-04T10:26:34.559Z",
+            "phone_number": "+989273105054",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 51,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.276Z",
-            "updated_at": "2025-06-03T09:58:31.276Z",
-            "phone_number": "+989099863992",
+            "password": "pbkdf2_sha256$1000000$JjZjIGUevCsgubIIlZYrbz$REXHq/P36tAVWiNw1shQkj+3rZvoQzGBnuIQNgKfgP4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989400613639",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:34.561Z",
+            "created_at": "2025-06-04T10:26:34.561Z",
+            "updated_at": "2025-06-04T10:26:34.776Z",
+            "phone_number": "+989400613639",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 52,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.277Z",
-            "updated_at": "2025-06-03T09:58:31.277Z",
-            "phone_number": "+989067742309",
+            "password": "pbkdf2_sha256$1000000$wvqpuImrBEjwRsxylxV2Iv$jCO2uJHNHS4aWebBK3IU5oIABfKaAceNprbETqoT6Ww=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989422196328",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:34.779Z",
+            "created_at": "2025-06-04T10:26:34.779Z",
+            "updated_at": "2025-06-04T10:26:35.003Z",
+            "phone_number": "+989422196328",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 53,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.279Z",
-            "updated_at": "2025-06-03T09:58:31.279Z",
-            "phone_number": "+989040292166",
+            "password": "pbkdf2_sha256$1000000$VnKk3nwc6OMmysOH0H8FUn$fG7IYbD6D0/Q17WZ1a0iy6zdKYV6hjCKknDZdW9/DYY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989613089026",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:35.005Z",
+            "created_at": "2025-06-04T10:26:35.005Z",
+            "updated_at": "2025-06-04T10:26:35.219Z",
+            "phone_number": "+989613089026",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 54,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.281Z",
-            "updated_at": "2025-06-03T09:58:31.281Z",
-            "phone_number": "+989312441378",
+            "password": "pbkdf2_sha256$1000000$zE6BSdCODPxyomdRzqZR3u$2/sma0TR08cy9XbRmAHgG1SIDgpvIUcc1dV5AR7mtno=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989397623524",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:35.222Z",
+            "created_at": "2025-06-04T10:26:35.222Z",
+            "updated_at": "2025-06-04T10:26:35.413Z",
+            "phone_number": "+989397623524",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 55,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.282Z",
-            "updated_at": "2025-06-03T09:58:31.282Z",
-            "phone_number": "+989074599467",
+            "password": "pbkdf2_sha256$1000000$eAWOijbTzIXl4EukDxdZjD$VAdG44XhRVhlw9Jy2V6/3qoTk1ZJtJmt9tRBulntClI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989690889166",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:35.415Z",
+            "created_at": "2025-06-04T10:26:35.415Z",
+            "updated_at": "2025-06-04T10:26:35.608Z",
+            "phone_number": "+989690889166",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 56,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.284Z",
-            "updated_at": "2025-06-03T09:58:31.284Z",
-            "phone_number": "+989534001465",
+            "password": "pbkdf2_sha256$1000000$QkuS69J4gTFuwpf9R5oLpm$XhpubDrUuWOhhv6DpkwEXEEyF4xGAmi7N7bZ1o42veY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989262184087",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:35.611Z",
+            "created_at": "2025-06-04T10:26:35.611Z",
+            "updated_at": "2025-06-04T10:26:35.805Z",
+            "phone_number": "+989262184087",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 57,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.286Z",
-            "updated_at": "2025-06-03T09:58:31.286Z",
-            "phone_number": "+989305244948",
+            "password": "pbkdf2_sha256$1000000$mXLoRJLXTpluJLodwDFRFx$dQMouBl1Y907Ui5E8lKcnj6h9oDiJw0NfgamJm0QOxU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989252267538",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:35.808Z",
+            "created_at": "2025-06-04T10:26:35.808Z",
+            "updated_at": "2025-06-04T10:26:36.071Z",
+            "phone_number": "+989252267538",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 58,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.287Z",
-            "updated_at": "2025-06-03T09:58:31.287Z",
-            "phone_number": "+989824790366",
+            "password": "pbkdf2_sha256$1000000$CSzeNl1EguTWxulpe7SEVP$cV2Y9xDU6U7q79oJk0DwmXmjlENULY65pBq/eakFC6s=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989300852863",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:36.074Z",
+            "created_at": "2025-06-04T10:26:36.074Z",
+            "updated_at": "2025-06-04T10:26:36.315Z",
+            "phone_number": "+989300852863",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 59,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.290Z",
-            "updated_at": "2025-06-03T09:58:31.290Z",
-            "phone_number": "+989921889825",
+            "password": "pbkdf2_sha256$1000000$6Vd1kRY6MbYY3p6B47twfz$6apyxccqurka6gd4tsCUC+vU9yoV7bj0mXfgma1t7ho=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989246168428",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:36.318Z",
+            "created_at": "2025-06-04T10:26:36.318Z",
+            "updated_at": "2025-06-04T10:26:36.555Z",
+            "phone_number": "+989246168428",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 60,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.292Z",
-            "updated_at": "2025-06-03T09:58:31.292Z",
-            "phone_number": "+989491377669",
+            "password": "pbkdf2_sha256$1000000$L0yjaqSGrJZB9gwJmgbrJO$ERSVW8elLPfoRb/S+iTrcfHXzte/0UvHTCeyfrInuds=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989387568881",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:36.558Z",
+            "created_at": "2025-06-04T10:26:36.559Z",
+            "updated_at": "2025-06-04T10:26:36.791Z",
+            "phone_number": "+989387568881",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 61,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.294Z",
-            "updated_at": "2025-06-03T09:58:31.294Z",
-            "phone_number": "+989625129514",
+            "password": "pbkdf2_sha256$1000000$eam7jhtUOvvAHJVxRMXy3y$dS3GhHiZIVqMxoLzByK0on0BuNvBvyEGM4qM5nDn4ws=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989452576476",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:36.792Z",
+            "created_at": "2025-06-04T10:26:36.793Z",
+            "updated_at": "2025-06-04T10:26:36.989Z",
+            "phone_number": "+989452576476",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 62,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.295Z",
-            "updated_at": "2025-06-03T09:58:31.295Z",
-            "phone_number": "+989515506876",
+            "password": "pbkdf2_sha256$1000000$DH34ePZ7AszsOHhiEfqIQK$y0KrHrpgeOvBm9BLYEuF0AJ9CIhVlSPJgiaO3aw08qM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989430245272",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:36.992Z",
+            "created_at": "2025-06-04T10:26:36.993Z",
+            "updated_at": "2025-06-04T10:26:37.184Z",
+            "phone_number": "+989430245272",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 63,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.297Z",
-            "updated_at": "2025-06-03T09:58:31.297Z",
-            "phone_number": "+989550222899",
+            "password": "pbkdf2_sha256$1000000$4Ftp7BEC4RvnJ2zmLUjGbv$27QCgPTqtl/zFaXGkv3SAKk/ftSmcLwpV5+AQz0wngg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989849033155",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:37.187Z",
+            "created_at": "2025-06-04T10:26:37.187Z",
+            "updated_at": "2025-06-04T10:26:37.375Z",
+            "phone_number": "+989849033155",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 64,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.298Z",
-            "updated_at": "2025-06-03T09:58:31.298Z",
-            "phone_number": "+989319627182",
+            "password": "pbkdf2_sha256$1000000$KAEwWhk90lJ0Rsnzi9lzXt$TYaqPQdobrTwrkO8K9mwgl5cnUfTiY2N11z6yGoIKKE=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989938911167",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:37.377Z",
+            "created_at": "2025-06-04T10:26:37.378Z",
+            "updated_at": "2025-06-04T10:26:37.567Z",
+            "phone_number": "+989938911167",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 65,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.300Z",
-            "updated_at": "2025-06-03T09:58:31.300Z",
-            "phone_number": "+989686883950",
+            "password": "pbkdf2_sha256$1000000$MH8AgfefKCU9eWO2dhjSqC$OMWZ2RjXJOPv05dx+RfWumwvQVT6RYhudNFDNTDuC5Q=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989599702837",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:37.570Z",
+            "created_at": "2025-06-04T10:26:37.570Z",
+            "updated_at": "2025-06-04T10:26:37.758Z",
+            "phone_number": "+989599702837",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 66,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.301Z",
-            "updated_at": "2025-06-03T09:58:31.301Z",
-            "phone_number": "+989810309322",
+            "password": "pbkdf2_sha256$1000000$ovffqiQNQrh87i0fSKawQk$cTZODrg4PKzH1IsQEwcVHLjk86zdgDiN4e1qoKjNves=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989464162930",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:37.761Z",
+            "created_at": "2025-06-04T10:26:37.761Z",
+            "updated_at": "2025-06-04T10:26:37.955Z",
+            "phone_number": "+989464162930",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 67,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.303Z",
-            "updated_at": "2025-06-03T09:58:31.303Z",
-            "phone_number": "+989385881622",
+            "password": "pbkdf2_sha256$1000000$wy5DxQXLtcGGEz9qSIN1oj$bmJ9NRxsWG8HYlLN467YCD63nOHZVNOZKfznarn6was=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989763284068",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:37.957Z",
+            "created_at": "2025-06-04T10:26:37.957Z",
+            "updated_at": "2025-06-04T10:26:38.146Z",
+            "phone_number": "+989763284068",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 68,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.305Z",
-            "updated_at": "2025-06-03T09:58:31.305Z",
-            "phone_number": "+989636406251",
+            "password": "pbkdf2_sha256$1000000$kPpeqKXTAbDHJaVUwLhoaO$ppO2TfMsYbO9gE0gfDc/ieIprTo6IHyfkYBMz722p7o=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989505084145",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:38.149Z",
+            "created_at": "2025-06-04T10:26:38.149Z",
+            "updated_at": "2025-06-04T10:26:38.336Z",
+            "phone_number": "+989505084145",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 69,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.307Z",
-            "updated_at": "2025-06-03T09:58:31.307Z",
-            "phone_number": "+989731233221",
+            "password": "pbkdf2_sha256$1000000$bENXJIHRWO4QwO6ZMbgdzN$dBGDqyNFdbyv1EB6bpdtcrLgLQyCmuXXU+NgO1+gNbk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989144928663",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:38.339Z",
+            "created_at": "2025-06-04T10:26:38.339Z",
+            "updated_at": "2025-06-04T10:26:38.528Z",
+            "phone_number": "+989144928663",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 70,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.309Z",
-            "updated_at": "2025-06-03T09:58:31.309Z",
-            "phone_number": "+989188172355",
+            "password": "pbkdf2_sha256$1000000$TDtRW2vDmIHvMYGcHfBrHc$lFg1jU/HYbOSPjsA7sckJaVawUY3puCS/PN90tF96EQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989469901310",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:38.531Z",
+            "created_at": "2025-06-04T10:26:38.531Z",
+            "updated_at": "2025-06-04T10:26:38.719Z",
+            "phone_number": "+989469901310",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 71,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.311Z",
-            "updated_at": "2025-06-03T09:58:31.311Z",
-            "phone_number": "+989421137688",
+            "password": "pbkdf2_sha256$1000000$uDnRLIZNf3FBhUdKo6R2lY$k/4Qrm5q+ZVRNcFKQm9lxajCGRMOESykUAVPlf+ime4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989941810212",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:38.722Z",
+            "created_at": "2025-06-04T10:26:38.722Z",
+            "updated_at": "2025-06-04T10:26:38.910Z",
+            "phone_number": "+989941810212",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 72,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.312Z",
-            "updated_at": "2025-06-03T09:58:31.312Z",
-            "phone_number": "+989358269216",
+            "password": "pbkdf2_sha256$1000000$WSiwBKzrEgrycgXpopemjO$oX1IcJu2WfYdu5T/GxlHvcd34kXlBsnqdBCKd2omCWA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989586926218",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:38.912Z",
+            "created_at": "2025-06-04T10:26:38.912Z",
+            "updated_at": "2025-06-04T10:26:39.102Z",
+            "phone_number": "+989586926218",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 73,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.314Z",
-            "updated_at": "2025-06-03T09:58:31.314Z",
-            "phone_number": "+989008388847",
-            "balance": "0",
-            "is_seller": false
+            "password": "pbkdf2_sha256$1000000$WgMN2ZgLTEPwgn7q5XLWiS$apXIjizLSkaVU3cRGt6YleLwwpCQMkgXnY5xTD6MTlI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989080879790",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:39.105Z",
+            "created_at": "2025-06-04T10:26:39.105Z",
+            "updated_at": "2025-06-04T11:01:02.483Z",
+            "phone_number": "+989080879790",
+            "balance": "3000000",
+            "is_seller": true,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 74,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.316Z",
-            "updated_at": "2025-06-03T09:58:31.316Z",
-            "phone_number": "+989127582111",
+            "password": "pbkdf2_sha256$1000000$aMx4PrNTwNhOGqElhEENtg$khhRcLPO039iW97cg/Vk4qltsVn6vhxDKKVjzn28wUI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989475662837",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:39.300Z",
+            "created_at": "2025-06-04T10:26:39.300Z",
+            "updated_at": "2025-06-04T10:26:39.490Z",
+            "phone_number": "+989475662837",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 75,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.317Z",
-            "updated_at": "2025-06-03T09:58:31.317Z",
-            "phone_number": "+989178761886",
+            "password": "pbkdf2_sha256$1000000$nAjwyy4OU25U4TCA8DEhue$Ddk9yttf1TdWDAz9c7CN1QKxkcTAhKrYCjFrSe+HOlY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989339335917",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:39.492Z",
+            "created_at": "2025-06-04T10:26:39.492Z",
+            "updated_at": "2025-06-04T10:26:39.680Z",
+            "phone_number": "+989339335917",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 76,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.319Z",
-            "updated_at": "2025-06-03T09:58:31.319Z",
-            "phone_number": "+989021115539",
+            "password": "pbkdf2_sha256$1000000$k0EVI5XlHYgeMw2a6jV2ge$sGn/j14XJOBGu+uPc9rS9Il41jTx/qyjx2SkgJcS24w=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989126387462",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:39.682Z",
+            "created_at": "2025-06-04T10:26:39.682Z",
+            "updated_at": "2025-06-04T10:26:39.871Z",
+            "phone_number": "+989126387462",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 77,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.320Z",
-            "updated_at": "2025-06-03T09:58:31.320Z",
-            "phone_number": "+989756120117",
+            "password": "pbkdf2_sha256$1000000$RYRz7LHtNwsqzMa1GaTk8N$359sTWgAsAKLCcDIUgOZ3MGneuSCcu+JLZgUnn0U2SU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989212720178",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:39.873Z",
+            "created_at": "2025-06-04T10:26:39.873Z",
+            "updated_at": "2025-06-04T10:26:40.062Z",
+            "phone_number": "+989212720178",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 78,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.322Z",
-            "updated_at": "2025-06-03T09:58:31.322Z",
-            "phone_number": "+989922670933",
+            "password": "pbkdf2_sha256$1000000$uAd8ziWIdVGi6oSVePqgXM$WkLd7d5uF0DG3YziRhL8DfQ0JfnYYUPBpS7uz3qxlBI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989430163727",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:40.065Z",
+            "created_at": "2025-06-04T10:26:40.065Z",
+            "updated_at": "2025-06-04T10:26:40.253Z",
+            "phone_number": "+989430163727",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 79,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.323Z",
-            "updated_at": "2025-06-03T09:58:31.323Z",
-            "phone_number": "+989468317675",
+            "password": "pbkdf2_sha256$1000000$Zk4dpuYMmyPZHqHZIyjwCq$fvgOynhdMt/aUOBiNN/mslPQyGX5b0UNllI2WPIBnkE=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989245543479",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:40.256Z",
+            "created_at": "2025-06-04T10:26:40.256Z",
+            "updated_at": "2025-06-04T10:26:40.446Z",
+            "phone_number": "+989245543479",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 80,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.325Z",
-            "updated_at": "2025-06-03T09:58:31.325Z",
-            "phone_number": "+989979948197",
+            "password": "pbkdf2_sha256$1000000$jiT1885gQEZzsyV7T4rfEC$hDGIf7FCutOJ6nz4PCPczZnFlTm/uwS/rab6PRsr58Y=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989269628333",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:40.449Z",
+            "created_at": "2025-06-04T10:26:40.449Z",
+            "updated_at": "2025-06-04T10:26:40.638Z",
+            "phone_number": "+989269628333",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 81,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.326Z",
-            "updated_at": "2025-06-03T09:58:31.326Z",
-            "phone_number": "+989725157066",
+            "password": "pbkdf2_sha256$1000000$5DB5YefLgmk2qqZhCZ2llH$5IMj9naLXzrcn824vk8UuanSg+F8RNyMeGOpqnylVOo=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989774954351",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:40.641Z",
+            "created_at": "2025-06-04T10:26:40.641Z",
+            "updated_at": "2025-06-04T10:26:40.836Z",
+            "phone_number": "+989774954351",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 82,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.328Z",
-            "updated_at": "2025-06-03T09:58:31.328Z",
-            "phone_number": "+989390102300",
+            "password": "pbkdf2_sha256$1000000$w7OZZTRa9GUqAxJcz1lfHr$8HHiql9OA+L8lTNkXa0mJ9qrcKSoyMpuHaur92foLJQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989527038179",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:40.838Z",
+            "created_at": "2025-06-04T10:26:40.838Z",
+            "updated_at": "2025-06-04T10:26:41.027Z",
+            "phone_number": "+989527038179",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 83,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.329Z",
-            "updated_at": "2025-06-03T09:58:31.329Z",
-            "phone_number": "+989756462570",
+            "password": "pbkdf2_sha256$1000000$BxbyTDwU4vZPTsUtLOnYvB$w8pV/7sVLj5nVbnLxMrYfxNHSfHA9zz9VWGoCSVQ5hQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989427685687",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:41.030Z",
+            "created_at": "2025-06-04T10:26:41.030Z",
+            "updated_at": "2025-06-04T10:26:41.221Z",
+            "phone_number": "+989427685687",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 84,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.331Z",
-            "updated_at": "2025-06-03T09:58:31.331Z",
-            "phone_number": "+989371986116",
+            "password": "pbkdf2_sha256$1000000$quStpWet8izCLKREz4pebE$vVuzfIj1KsMISoaijuw46iX3bVHVOTrO5E3Aec2HWSY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989643318849",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:41.223Z",
+            "created_at": "2025-06-04T10:26:41.224Z",
+            "updated_at": "2025-06-04T10:26:41.416Z",
+            "phone_number": "+989643318849",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 85,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.332Z",
-            "updated_at": "2025-06-03T09:58:31.332Z",
-            "phone_number": "+989245257995",
+            "password": "pbkdf2_sha256$1000000$titzBDs2cBGr0zofBresAx$hr+bcVWaojB3pp7gMAGJQaw/wtt3QZkm6LvPL7N3Nds=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989314344520",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:41.419Z",
+            "created_at": "2025-06-04T10:26:41.419Z",
+            "updated_at": "2025-06-04T10:26:41.621Z",
+            "phone_number": "+989314344520",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 86,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.334Z",
-            "updated_at": "2025-06-03T09:58:31.334Z",
-            "phone_number": "+989297484795",
+            "password": "pbkdf2_sha256$1000000$33mf17jDScdGA2xwutQrgc$MEbwPWxykKa890LSgvO5iEd0TCgg1WDoxIUNwQYHQwY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989736764920",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:41.624Z",
+            "created_at": "2025-06-04T10:26:41.624Z",
+            "updated_at": "2025-06-04T10:26:41.822Z",
+            "phone_number": "+989736764920",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 87,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.335Z",
-            "updated_at": "2025-06-03T09:58:31.335Z",
-            "phone_number": "+989373446497",
+            "password": "pbkdf2_sha256$1000000$HIjLdan5GTaLseHecJWdps$nRVD3KOgFsp3KIi/YJbNUpJFbrtHqTCsRY9zyHQQPQU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989835999751",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:41.824Z",
+            "created_at": "2025-06-04T10:26:41.824Z",
+            "updated_at": "2025-06-04T10:26:42.101Z",
+            "phone_number": "+989835999751",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 88,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.337Z",
-            "updated_at": "2025-06-03T09:58:31.337Z",
-            "phone_number": "+989046811638",
+            "password": "pbkdf2_sha256$1000000$ZdWLEnK21zyN3YNFdu3sKJ$ETJdhUGGOvSZCov5pN6oJcmSpdXtiJK/pURGwDC6upI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989577114373",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:42.104Z",
+            "created_at": "2025-06-04T10:26:42.104Z",
+            "updated_at": "2025-06-04T10:26:42.302Z",
+            "phone_number": "+989577114373",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 89,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.338Z",
-            "updated_at": "2025-06-03T09:58:31.338Z",
-            "phone_number": "+989889558497",
+            "password": "pbkdf2_sha256$1000000$CWcFp0ndAU3ZAb3zIs2htw$X8TBxSVvw4LHTCgq5fdA31W/x6IjJ40trQQsVlNWPKA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989963015569",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:42.304Z",
+            "created_at": "2025-06-04T10:26:42.304Z",
+            "updated_at": "2025-06-04T10:26:42.491Z",
+            "phone_number": "+989963015569",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 90,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.340Z",
-            "updated_at": "2025-06-03T09:58:31.340Z",
-            "phone_number": "+989689272678",
+            "password": "pbkdf2_sha256$1000000$duzUcrQ3TKMu4wgtu64gaw$JNFPKZIcjLDMt5QGgg+FJVxToV0aq5Q7jskMSkyTywQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989866155863",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:42.494Z",
+            "created_at": "2025-06-04T10:26:42.494Z",
+            "updated_at": "2025-06-04T10:26:42.686Z",
+            "phone_number": "+989866155863",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 91,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.341Z",
-            "updated_at": "2025-06-03T09:58:31.341Z",
-            "phone_number": "+989619369189",
+            "password": "pbkdf2_sha256$1000000$FculT4F4Q5qsohVaEPHoyX$2EZSH03/8RMM3o+qR2zS53GMHO0nlOaeAB5Otg8ZI08=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989543954188",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:42.689Z",
+            "created_at": "2025-06-04T10:26:42.689Z",
+            "updated_at": "2025-06-04T10:26:42.878Z",
+            "phone_number": "+989543954188",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 92,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.343Z",
-            "updated_at": "2025-06-03T09:58:31.343Z",
-            "phone_number": "+989851881970",
+            "password": "pbkdf2_sha256$1000000$B7uy7Pksxg11clqFN56LPx$2e01v/zQdjSjm+EWCShqyGQmIrCiGijL1XnrPWgmQyQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989510523541",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:42.881Z",
+            "created_at": "2025-06-04T10:26:42.881Z",
+            "updated_at": "2025-06-04T10:26:43.071Z",
+            "phone_number": "+989510523541",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 93,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.344Z",
-            "updated_at": "2025-06-03T09:58:31.344Z",
-            "phone_number": "+989601223192",
-            "balance": "0",
-            "is_seller": false
+            "password": "pbkdf2_sha256$1000000$k62gXlyrNvS9XOb81HnCIj$WS4SbXWJ+uDwYLAdX46DG9WhKHKDSr9nR+wgfJ+AvLs=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989020026132",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:43.074Z",
+            "created_at": "2025-06-04T10:26:43.074Z",
+            "updated_at": "2025-06-04T11:01:02.488Z",
+            "phone_number": "+989020026132",
+            "balance": "3000000",
+            "is_seller": true,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 94,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.346Z",
-            "updated_at": "2025-06-03T09:58:31.346Z",
-            "phone_number": "+989293210064",
+            "password": "pbkdf2_sha256$1000000$jufSPM2b8FZWA4Y8jSJ014$nGXO8R3jHKZlROXO76s+cqz/vJeWSwZbBx2FkEm4sG4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989797924390",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:43.268Z",
+            "created_at": "2025-06-04T10:26:43.268Z",
+            "updated_at": "2025-06-04T10:26:43.462Z",
+            "phone_number": "+989797924390",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 95,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.347Z",
-            "updated_at": "2025-06-03T09:58:31.347Z",
-            "phone_number": "+989377852994",
+            "password": "pbkdf2_sha256$1000000$ubV26M5FzSiBHNcGAzhNST$YLkYG+UUPXN60JKtbl/CRdBqfi653Fqki42uX9zK1rE=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989355543330",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:43.464Z",
+            "created_at": "2025-06-04T10:26:43.465Z",
+            "updated_at": "2025-06-04T10:26:43.654Z",
+            "phone_number": "+989355543330",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 96,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.349Z",
-            "updated_at": "2025-06-03T09:58:31.349Z",
-            "phone_number": "+989912988480",
+            "password": "pbkdf2_sha256$1000000$VW5bwkJDymsq4arNVmWuG3$2rgGbZTAK/cEU9ZSzA4O8ERc5EQGFMLcgFfB/matewU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989501679182",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:43.656Z",
+            "created_at": "2025-06-04T10:26:43.656Z",
+            "updated_at": "2025-06-04T10:26:43.847Z",
+            "phone_number": "+989501679182",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 97,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.350Z",
-            "updated_at": "2025-06-03T09:58:31.350Z",
-            "phone_number": "+989493662581",
+            "password": "pbkdf2_sha256$1000000$pjqTDmKoiUsGcKLoybqp9X$EIxLl26JdjWgHgkTUHCBcS1TYGXRW6N0BkyyrbbwAwA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989679139963",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:43.849Z",
+            "created_at": "2025-06-04T10:26:43.849Z",
+            "updated_at": "2025-06-04T10:26:44.035Z",
+            "phone_number": "+989679139963",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 98,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.352Z",
-            "updated_at": "2025-06-03T09:58:31.352Z",
-            "phone_number": "+989615990477",
+            "password": "pbkdf2_sha256$1000000$yJUe9GovxMQw3JHTyFF0iG$uzqXhlvd2cNxLpDeWMsvclT4DKVPV1GkASa0CHTFfoc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989371451994",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:44.038Z",
+            "created_at": "2025-06-04T10:26:44.038Z",
+            "updated_at": "2025-06-04T10:26:44.225Z",
+            "phone_number": "+989371451994",
             "balance": "0",
-            "is_seller": false
+            "is_seller": false,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 99,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.354Z",
-            "updated_at": "2025-06-03T10:15:54.051Z",
-            "phone_number": "+989892512433",
+            "password": "pbkdf2_sha256$1000000$fPkZU50u7UMaT5k3ruc1WL$uvJR2sG7SqBspv4eFtQ0tAeUkudrrsPbvRtXX/WFWUQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989203016403",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:44.227Z",
+            "created_at": "2025-06-04T10:26:44.227Z",
+            "updated_at": "2025-06-04T10:26:44.416Z",
+            "phone_number": "+989203016403",
             "balance": "2280000",
-            "is_seller": true
+            "is_seller": true,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
         "model": "credit_charge.user",
         "pk": 100,
         "fields": {
-            "created_at": "2025-06-03T09:58:31.355Z",
-            "updated_at": "2025-06-03T10:15:54.054Z",
-            "phone_number": "+989486018480",
+            "password": "pbkdf2_sha256$1000000$t4vxY7Ym7RR4fnpMvZVUP1$EoY3WvaHhXrsk2nJ0zw9zm0rp9hIpN5yFasOn4QgPPk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "+989097907343",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-06-04T10:26:44.418Z",
+            "created_at": "2025-06-04T10:26:44.418Z",
+            "updated_at": "2025-06-04T10:26:44.609Z",
+            "phone_number": "+989097907343",
             "balance": "1555000",
-            "is_seller": true
+            "is_seller": true,
+            "groups": [],
+            "user_permissions": []
         }
     },
     {
@@ -1704,6 +2417,54 @@
             "status": "CONFIRMED",
             "amount": "1500000",
             "transaction_id": "1bee455e-1b03-4b50-8d0d-b20160fc1f23"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 11,
+        "fields": {
+            "created_at": "2025-06-04T11:00:44.752Z",
+            "updated_at": "2025-06-04T11:01:02.491Z",
+            "user": 18,
+            "status": "CONFIRMED",
+            "amount": "3000000",
+            "transaction_id": "db55eb6a-8f81-4ad2-b2ac-cbd399d64552"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 12,
+        "fields": {
+            "created_at": "2025-06-04T11:00:44.757Z",
+            "updated_at": "2025-06-04T11:01:02.490Z",
+            "user": 93,
+            "status": "CONFIRMED",
+            "amount": "3000000",
+            "transaction_id": "2949170e-e6b6-4391-968b-31d6f50cee10"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 13,
+        "fields": {
+            "created_at": "2025-06-04T11:00:44.761Z",
+            "updated_at": "2025-06-04T11:01:02.487Z",
+            "user": 16,
+            "status": "CONFIRMED",
+            "amount": "3000000",
+            "transaction_id": "680c1d57-468d-4b2f-ae55-34ffa54c4ea1"
+        }
+    },
+    {
+        "model": "credit_charge.charge",
+        "pk": 14,
+        "fields": {
+            "created_at": "2025-06-04T11:00:44.765Z",
+            "updated_at": "2025-06-04T11:01:02.485Z",
+            "user": 73,
+            "status": "CONFIRMED",
+            "amount": "3000000",
+            "transaction_id": "0c26e99d-022c-4340-8265-7210cb764797"
         }
     }
 ]

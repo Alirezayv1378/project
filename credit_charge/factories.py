@@ -16,8 +16,17 @@ class UserFactory(factory.django.DjangoModelFactory):
         model = credit_charge.models.User
 
     phone_number = factory.LazyAttribute(lambda _: f"+98{FAKE.unique.random_int(9000000000, 9999999999)}")
+
     balance = decimal.Decimal("0")
     is_seller = factory.LazyAttribute(lambda _: FAKE.boolean())
+
+    @factory.post_generation
+    def password(self, create, extracted, **kwargs):
+        self.username = self.phone_number
+        raw_password = self.phone_number  # use phone number as password
+        self.set_password(raw_password)
+        if create:
+            self.save()
 
 
 class ChargeFactory(factory.django.DjangoModelFactory):
