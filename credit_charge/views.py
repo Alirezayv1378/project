@@ -3,7 +3,6 @@ import logging
 import rest_framework.response
 from rest_framework import mixins, permissions, status, viewsets
 
-import credit_charge.exceptions
 import credit_charge.models
 import credit_charge.serializers
 import credit_charge.services
@@ -32,7 +31,7 @@ class ChargeViewSet(
     viewsets.GenericViewSet,
 ):
     serializer_class = credit_charge.serializers.ChargeSerializer
-    queryset = credit_charge.models.Charge.objects.all()
+    queryset = credit_charge.models.Charge.objects.select_related("user").all()
     lookup_field = "transaction_id"
     permission_classes = [IsSellerOrAuthenticated]
 
@@ -59,7 +58,7 @@ class UserTransactionViewSet(
     mixins.CreateModelMixin,
     viewsets.GenericViewSet,
 ):
-    queryset = credit_charge.models.UserTransaction.objects.all()
+    queryset = credit_charge.models.UserTransaction.objects.select_related("seller", "receiver_user").all()
     lookup_field = "transaction_id"
     permission_classes = [IsSellerOrAuthenticated]
     serializer_class = credit_charge.serializers.UserTransactionSerializer
@@ -71,7 +70,6 @@ class UserTransactionViewSet(
         receiver_phone_number = serializer.validated_data["receiver_phone_number"]
         amount = serializer.validated_data["amount"]
         seller_phone_number = request.user.phone_number
-
         try:
             transaction = credit_charge.services.create_transaction(
                 seller_phone_number=seller_phone_number,

@@ -12,4 +12,8 @@ urlpatterns = [
     path("api/v1/token/", simplejwtviews.TokenObtainPairView.as_view(), name="api_token_auth"),
     path("api/v1/token/refresh/", simplejwtviews.TokenRefreshView.as_view(), name="token_refresh"),
     path("api/v1/", include("credit_charge.urls")),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
+if settings.DEBUG is True:
+    urlpatterns.extend(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))
+    urlpatterns.append(path("silk/", include("silk.urls", namespace="silk")))

@@ -281,12 +281,16 @@ django==5.2.1 \
     --hash=sha256:57fe1f1b59462caed092c80b3dd324fd92161b620d59a9ba9181c34746c97284 \
     --hash=sha256:a9b680e84f9a0e71da83e399f1e922e1ab37b2173ced046b541c72e1589a5961
     # via django-model-utils
+    # via django-silk
     # via djangorestframework
     # via djangorestframework-simplejwt
     # via drf-spectacular
 django-model-utils==5.0.0 \
     --hash=sha256:041cdd6230d2fbf6cd943e1969318bce762272077f4ecd333ab2263924b4e5eb \
     --hash=sha256:fec78e6c323d565a221f7c4edc703f4567d7bb1caeafe1acd16a80c5ff82056b
+django-silk==5.4.0 \
+    --hash=sha256:2247870ac8080b6c6c5db17f2f1042d39d95e4a5fa061d661882777ec9adb672 \
+    --hash=sha256:caf720a06e24a6cf1acf825c1868b2a6ece8158b13725363f6d3a1a9994d0fa6
 djangorestframework==3.16.0 \
     --hash=sha256:bea7e9f6b96a8584c5224bfb2e4348dfb3f8b5e34edbecb98da258e892089361 \
     --hash=sha256:f022ff46613584de994c0c6a4aebbace5fd700555fbe9d33b865ebf173eba6c9
@@ -456,6 +460,10 @@ geventhttpclient==2.3.3 \
     --hash=sha256:f5724370d95ce9753846ff90d7805a11f7981d9dc579e3a229fa594cb401da98 \
     --hash=sha256:f584fa36981b8a93799c63226a3deb385d1cc4f19eacd5dd6c696da0ecb4cca6
     # via locust
+gprof2dot==2025.4.14 \
+    --hash=sha256:0742e4c0b4409a5e8777e739388a11e1ed3750be86895655312ea7c20bd0090e \
+    --hash=sha256:35743e2d2ca027bf48fa7cba37021aaf4a27beeae1ae8e05a50b55f1f921a6ce
+    # via django-silk
 greenlet==3.2.2 \
     --hash=sha256:00cd814b8959b95a546e47e8d589610534cfb71f19802ea8a2ad99d95d702057 \
     --hash=sha256:02a98600899ca1ca5d3a2590974c9e3ec259503b2d6ba6527605fcd74e08e207 \
@@ -1116,6 +1124,7 @@ sqlparse==0.5.3 \
     --hash=sha256:09f67787f56a0b16ecdbde1bfc7f5d9c3371ca683cfeaa8e6ff60b4807ec9272 \
     --hash=sha256:cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca
     # via django
+    # via django-silk
 stack-data==0.6.3 \
     --hash=sha256:836a778de4fec4dcd1dcd89ed8abff8a221f58308462e1c4aa2a3cf30148f0b9 \
     --hash=sha256:d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695

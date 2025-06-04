@@ -21,7 +21,7 @@ def create_transaction(
     if amount <= 0:
         raise rest_framework.exceptions.ValidationError("Amount must be greater than 0.")
 
-    users = credit_charge.models.User.objects.select_for_update().filter(
+    users = credit_charge.models.User.objects.select_for_update(of=["self"]).filter(
         phone_number__in=[seller_phone_number, receiver_phone_number],
     )
     users_by_phone = {user.phone_number: user for user in users}
@@ -40,7 +40,6 @@ def create_transaction(
         receiver_user=receiver,
         amount=amount,
     )
-
     try:
         seller.update_balance(amount=decimal.Decimal("-1") * amount)
         receiver.update_balance(amount=amount)

@@ -62,7 +62,7 @@ class User(django_auth_models.AbstractUser, utils.models.CreateUpdateTracker):
                     user=self,
                     user_balance=initial_balance,
                 )
-            self.save()
+            self.save(update_fields=["balance"])
         except credit_charge.exceptions.NegetavieBalanceError as e:
             logger.error(f"User {self} has insufficient balance: {e}")
             raise e
@@ -133,7 +133,7 @@ class Charge(utils.models.CreateUpdateTracker):
         return super().clean(**kwargs)
 
     def save(self, **kwargs):
-        self.full_clean()
+        self.clean()
         return super().save(**kwargs)
 
 
@@ -198,17 +198,17 @@ class UserTransaction(utils.models.CreateUpdateTracker):
 
     def confirm_transaction(self):
         self.status = credit_charge.consts.TransactionStatus.CONFIRMED
-        self.save()
+        self.save(update_fields=["status"])
 
     def reject_transaction(self, reason: credit_charge.consts.UserTransactionDescription):
         self.status = credit_charge.consts.TransactionStatus.FAILED
         self.description = reason
-        self.save()
+        self.save(update_fields=["status"])
 
     def clean(self, **kwargs):
         credit_charge.model_validators.validate_transaction_status(self)
         return super().clean(**kwargs)
 
     def save(self, **kwargs):
-        self.full_clean()
+        self.clean()
         return super().save(**kwargs)
