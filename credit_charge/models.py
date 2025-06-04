@@ -4,7 +4,6 @@ import uuid
 
 import model_utils
 from django.contrib.auth import models as django_auth_models
-from django.core import exceptions
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -50,34 +49,25 @@ class User(django_auth_models.AbstractUser, utils.models.CreateUpdateTracker):
         ]
         ordering = ("-created_at",)
 
-    @classmethod
     def update_balance(
-        cls,
+        self,
         amount: decimal.Decimal,
-        phone_number: str,
     ):
-        """
-        Must be use in atomic transaction
-        """
         try:
-            # Lock user object to prevent double-spending and race conditions
-            user = cls.objects.select_for_update(of=["self"]).get(phone_number=phone_number)
-            initial_balance = user.balance
-            user.balance += amount
-            if user.balance < 0:
+            initial_balance = self.balance
+            self.balance += amount
+            if self.balance < 0:
                 raise credit_charge.exceptions.NegetavieBalanceError(
                     amount=amount,
-                    user=user,
+                    user=self,
                     user_balance=initial_balance,
                 )
-            user.save()
+            self.save()
         except credit_charge.exceptions.NegetavieBalanceError as e:
-            logger.error(f"User {user} has insufficient balance: {e}")
+            logger.error(f"User {self} has insufficient balance: {e}")
             raise e
-        except exceptions.ObjectDoesNotExist as e:
-            logger.error(f"User with phone number {phone_number} does not exist: {e}")
         except Exception as e:
-            logger.error(f"Error raised during updating {user} wallet balance: {e}")
+            logger.error(f"Error raised during updating {self} wallet balance: {e}")
             raise e
 
 

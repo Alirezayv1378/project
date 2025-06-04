@@ -20,7 +20,7 @@ def check_user_balance(user: credit_charge.models.User) -> None:
         )
         diff = total_charge["total"] - total_expense["total"]
         if diff < 0:
-            raise credit_charge.exceptions.UserBalanceCheckError(user=user, diff=diff)
+            raise Exception
     except credit_charge.models.Charge.DoesNotExist:
         pass
     except credit_charge.models.UserTransaction.DoesNotExist:
@@ -57,9 +57,6 @@ class TestServices(test.TestCase):
         self.assertEqual(self.seller_2.balance, seller_2_total_charge["total"])
 
     def test_sellers_balance_case_with_transaction_created(self):
-        seller_1_initial_balance = self.seller_1.balance
-        seller_2_initial_balance = self.seller_2.balance
-
         customers = credit_charge.models.User.objects.filter(is_seller=False)
         seller_1_total_expense = decimal.Decimal("0")
         seller_2_total_expense = decimal.Decimal("0")
@@ -85,5 +82,5 @@ class TestServices(test.TestCase):
 
         check_user_balance(self.seller_1)
         check_user_balance(self.seller_2)
-        self.assertEqual(self.seller_1.balance, seller_1_initial_balance - seller_1_total_expense)
-        self.assertEqual(self.seller_2.balance, seller_2_initial_balance - seller_2_total_expense)
+        self.assertEqual(self.seller_1.balance, decimal.Decimal("1_555_000") - seller_1_total_expense)
+        self.assertEqual(self.seller_2.balance, decimal.Decimal("2_280_000") - seller_2_total_expense)

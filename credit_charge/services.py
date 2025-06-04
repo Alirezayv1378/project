@@ -13,34 +13,25 @@ logger = logging.getLogger(__name__)
 
 
 @transaction.atomic
-def create_charge(phone_number: str, amount: decimal.Decimal) -> credit_charge.models.Charge:
-    try:
-        user = credit_charge.models.User.objects.get(phone_number=phone_number)
-    except credit_charge.models.User.DoesNotExist:
-        raise rest_framework.exceptions.ValidationError("User with this phone number does not exist.")  # noqa: B904
-
-    if not user.is_seller:
-        raise rest_framework.exceptions.ValidationError("Only sellers are allowed to create charge request.")
-
-    return credit_charge.models.Charge.create_charge(amount=amount, user=user)
-
-
-@transaction.atomic
 def create_transaction(
     seller_phone_number: str,
     receiver_phone_number: str,
     amount: decimal.Decimal,
 ) -> credit_charge.models.UserTransaction:
-    try:
-        seller = credit_charge.models.User.objects.get(phone_number=seller_phone_number)
-    except credit_charge.models.User.DoesNotExist:
-        raise rest_framework.exceptions.ValidationError("Seller with this phone number does not exist.")  # noqa: B904
+    if amount <= 0:
+        raise rest_framework.exceptions.ValidationError("Amount must be greater than 0.")
 
-    try:
-        receiver = credit_charge.models.User.objects.get(phone_number=receiver_phone_number)
-    except credit_charge.models.User.DoesNotExist:
-        raise rest_framework.exceptions.ValidationError("Receiver with this phone number does not exist.")  # noqa: B904
+    users = credit_charge.models.User.objects.select_for_update().filter(
+        phone_number__in=[seller_phone_number, receiver_phone_number],
+    )
+    users_by_phone = {user.phone_number: user for user in users}
 
+    seller = users_by_phone.get(seller_phone_number)
+    receiver = users_by_phone.get(receiver_phone_number)
+    if seller is None:
+        raise rest_framework.exceptions.ValidationError("Seller with this phone number does not exist.")
+    if receiver is None:
+        raise rest_framework.exceptions.ValidationError("Receiver with this phone number does not exist.")
     if not seller.is_seller:
         raise rest_framework.exceptions.ValidationError("Only sellers are allowed to create transaction.")
 
@@ -51,11 +42,8 @@ def create_transaction(
     )
 
     try:
-        credit_charge.models.User.update_balance(
-            amount=decimal.Decimal("-1") * amount,
-            phone_number=seller.phone_number,
-        )
-        credit_charge.models.User.update_balance(amount=amount, phone_number=receiver.phone_number)
+        seller.update_balance(amount=decimal.Decimal("-1") * amount)
+        receiver.update_balance(amount=amount)
         user_transaction.confirm_transaction()
     except credit_charge.exceptions.NegetavieBalanceError:
         user_transaction.reject_transaction(reason=credit_charge.consts.UserTransactionDescription.INSUFFICIENT_BALANCE)

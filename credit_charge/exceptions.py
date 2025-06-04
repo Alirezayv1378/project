@@ -14,10 +14,3 @@ class NegetavieBalanceError(Exception):
         self.user = user
         self.user_balance = user_balance
         super().__init__(f"User {self.user} has insufficient balance: {self.user_balance}")
-
-
-class UserBalanceCheckError(Exception):
-    def __init__(self, user: "credit_charge.models.User", diff: decimal.Decimal):
-        self.diff = diff
-        self.user = user
-        super().__init__(f"User {self.user} balance is not equal to total charge and expense: {self.diff}")

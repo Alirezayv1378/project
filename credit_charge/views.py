@@ -1,3 +1,5 @@
+import logging
+
 import rest_framework.response
 from rest_framework import mixins, permissions, status, viewsets
 
@@ -5,6 +7,8 @@ import credit_charge.exceptions
 import credit_charge.models
 import credit_charge.serializers
 import credit_charge.services
+
+logger = logging.getLogger(__name__)
 
 
 class IsSellerOrAuthenticated(permissions.BasePermission):
@@ -18,7 +22,7 @@ class IsSellerOrAuthenticated(permissions.BasePermission):
 class UserViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     queryset = credit_charge.models.User.objects.all()
     serializer_class = credit_charge.serializers.UserSerializer
-    lookup_field = "id"
+    lookup_field = "phone_number"
 
 
 class ChargeViewSet(
@@ -27,23 +31,25 @@ class ChargeViewSet(
     mixins.CreateModelMixin,
     viewsets.GenericViewSet,
 ):
+    serializer_class = credit_charge.serializers.ChargeSerializer
     queryset = credit_charge.models.Charge.objects.all()
     lookup_field = "transaction_id"
     permission_classes = [IsSellerOrAuthenticated]
 
-    def get_serializer_class(self):
-        if self.action == "create":
-            return credit_charge.serializers.CreateChargeRequestSerializer
-        return credit_charge.serializers.ChargeSerializer
-
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid()
-        charge = credit_charge.services.create_charge(
-            phone_number=serializer.validated_data["phone_number"],
-            amount=serializer.validated_data["amount"],
-        )
-        response_serializer = credit_charge.serializers.ChargeSerializer(charge)
+        serializer.is_valid(raise_exception=True)
+        amount = serializer.validated_data["amount"]
+        try:
+            charge = credit_charge.models.Charge.create_charge(user=request.user, amount=amount)
+        except Exception as e:
+            logger.error(f"Unexpected error: {str(e)}")
+            return rest_framework.response.Response(
+                {"message": "Unexpected error"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
+
+        response_serializer = self.get_serializer(charge)
         return rest_framework.response.Response(response_serializer.data, status=status.HTTP_201_CREATED)
 
 
@@ -56,30 +62,28 @@ class UserTransactionViewSet(
     queryset = credit_charge.models.UserTransaction.objects.all()
     lookup_field = "transaction_id"
     permission_classes = [IsSellerOrAuthenticated]
-
-    def get_serializer_class(self):
-        if self.action == "create":
-            return credit_charge.serializers.CeateUserTransactionRequestSerializer
-        return credit_charge.serializers.UserTransactionSerializer
+    serializer_class = credit_charge.serializers.UserTransactionSerializer
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid()
+        serializer.is_valid(raise_exception=True)
+
+        receiver_phone_number = serializer.validated_data["receiver_phone_number"]
+        amount = serializer.validated_data["amount"]
+        seller_phone_number = request.user.phone_number
 
         try:
             transaction = credit_charge.services.create_transaction(
-                seller_phone_number=serializer.validated_data["seller_phone_number"],
-                receiver_phone_number=serializer.validated_data["receiver_phone_number"],
-                amount=serializer.validated_data["amount"],
+                seller_phone_number=seller_phone_number,
+                receiver_phone_number=receiver_phone_number,
+                amount=amount,
             )
-        except credit_charge.exceptions.UserBalanceCheckError as e:
+        except Exception as e:
+            logger.error(f"Unexpected error: {str(e)}")
             return rest_framework.response.Response(
-                {
-                    "message": "Insufficient balance",
-                    "user": str(e.user),
-                    "diff": str(e.diff),
-                },
-                status=status.HTTP_400_BAD_REQUEST,
+                {"message": "Unexpected error"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
-        response_serializer = credit_charge.serializers.UserTransactionSerializer(transaction)
+
+        response_serializer = self.get_serializer(transaction)
         return rest_framework.response.Response(response_serializer.data, status=status.HTTP_201_CREATED)

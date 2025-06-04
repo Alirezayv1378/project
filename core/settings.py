@@ -170,8 +170,8 @@ AUTH_USER_MODEL = "credit_charge.User"
 
 # Simple JWT Settings
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(seconds=60),
-    "REFRESH_TOKEN_LIFETIME": datetime.timedelta(seconds=300),
+    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": datetime.timedelta(days=1),
     "AUTH_HEADER_TYPES": ("JWT", "Bearer"),
     "ALGORITHM": "HS256",
     "SIGNING_KEY": SECRET_KEY,
